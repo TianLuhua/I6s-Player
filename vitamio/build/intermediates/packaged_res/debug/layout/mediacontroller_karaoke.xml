@@ -11,28 +11,29 @@
         android:layout_height="@dimen/dimen_67"
         android:layout_alignParentTop="true"
         android:background="@drawable/actionbar_bg">
+
         <FrameLayout
             android:id="@+id/ib_back_vitamio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dimen_20"
-            >
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:layout_marginTop="6dp">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dimen_6"
                 android:background="@drawable/selector_back" />
 
 
         </FrameLayout>
 
         <!--<ImageButton-->
-            <!--android:id="@+id/ib_back_vitamio"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_marginLeft="@dimen/dimen_10"-->
-            <!--android:background="@color/transparent"-->
-            <!--android:src="@drawable/selector_back" />-->
+        <!--android:id="@+id/ib_back_vitamio"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginLeft="@dimen/dimen_10"-->
+        <!--android:background="@color/transparent"-->
+        <!--android:src="@drawable/selector_back" />-->
 
         <TextView
             android:id="@+id/tv_name_vitamio"
