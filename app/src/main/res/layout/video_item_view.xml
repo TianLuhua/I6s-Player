@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/icon_layer3" />
+
+        <com.booyue.karaoke.customview.RoundImageView
+            android:id="@+id/item_image"
+            android:layout_width="@dimen/dimen_124"
+            android:layout_height="@dimen/dimen_124"
+            android:layout_centerInParent="true"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            app:borderRadius="@dimen/dimen_48"
+            tools:src="@drawable/launcher_bg" />
+
+        <ImageView
+            android:layout_width="@dimen/dimen_124"
+            android:layout_height="@dimen/dimen_124"
+            android:layout_centerInParent="true"
+            android:background="@drawable/icon_layer1" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_9"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:maxEms="7"
+        android:singleLine="true"
+        android:textColor="#333333"
+        android:textSize="24sp" />
+</LinearLayout>

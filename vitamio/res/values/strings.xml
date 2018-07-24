@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">卡拉OK</string>
+    <string name="mtv">火火兔MTV</string>
+    <string name="local_karaoke">经典儿歌</string>
+    <string name="local_video">我的视频</string>
+    <string name="tips_empty_video">下暂无视频</string>
+    <string name="media_volume">媒体音量</string>
+    <string name="media_volume_progress">100/100</string>
+    <string name="media_accompany">伴唱</string>
+
+
+    <string name="vitamio_library_app_name">VitamioLibrary</string>
+    <string name="vitamio_init_decoders">Initializing decoders…</string>
+    <string name="permission_group_tools_label">Vitamio tools</string>
+    <string name="permission_group_tools_description">Access Vitamio package and resources.</string>
+    <string name="permission_receive_messages_label">Receive Vitamio messages</string>
+    <string name="permission_receive_messages_description">Receive all broadcasts from Vitamio service.</string>
+    <string name="permission_write_providers_label">Write Vitamio providers</string>
+    <string name="permission_write_providers_description">Delete, update or create new items in Vitamio providers.
+    </string>
+    <string name="VideoView_error_title">视频错误</string>
+    <string name="VideoView_error_text_invalid_progressive_playback">Sorry, this video is not valid for streaming tothis device.
+    </string>
+    <string name="VideoView_error_text_unknown">抱歉，此视频无法播放!</string>
+    <string name="VideoView_error_button">返回</string>
+    <string name="mediacontroller_play_pause">Play/Pause</string>
+    <string name="complete">完成</string>
+
+
+</resources>

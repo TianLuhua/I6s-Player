@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_volume_control_bg"
+        android:paddingTop="@dimen/dimen_16"
+        android:paddingBottom="@dimen/dimen_16"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_20"
+        android:text="@string/media_volume"
+        android:layout_marginLeft="@dimen/dimen_36"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/mediacontroller_volume_layout_textcolor"/>
+    <SeekBar
+        android:id="@+id/seekbar_volume"
+        android:layout_width="328dp"
+        android:layout_height="@dimen/dimen_34"
+        android:layout_marginLeft="@dimen/dimen_26"
+        android:max="100"
+        android:progress="50"
+        android:maxHeight="@dimen/dimen_11"
+        android:minHeight="@dimen/dimen_11"
+        android:paddingEnd="0.0dip"
+        android:paddingStart="0.0dip"
+        android:progressDrawable="@drawable/volume_seekbar"
+        android:splitTrack="false"
+        android:thumb="@drawable/shape_volume_thumb"
+        android:thumbOffset="@dimen/dimen_0"
+        android:layout_gravity="center_vertical"/>
+    <TextView
+        android:id="@+id/tv_progress"
+        android:layout_width="@dimen/dimen_78"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_16"
+        android:layout_gravity="center_vertical"
+        android:text="@string/media_volume_progress"
+        android:textSize="@dimen/text_20"
+        android:textColor="@color/mediacontroller_volume_layout_textcolor"
+        android:layout_marginRight="@dimen/dimen_10"
+        android:maxLines="1"
+        />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.booyue.karaoke">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/BackgroundTranslucent">
+        <activity
+            android:name="com.booyue.karaoke.activity.FlashActivity"
+            android:configChanges="orientation|screenSize|screenLayout|touchscreen|keyboardHidden|keyboard|layoutDirection"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="orientation|screenSize|screenLayout|touchscreen|keyboardHidden|keyboard|layoutDirection"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".activity.KoraokeActivity"
+            android:configChanges="orientation|screenSize|screenLayout|touchscreen|keyboardHidden|keyboard|layoutDirection"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- <activity -->
+        <!-- android:name=".activity.VideoActivity" -->
+        <!-- android:launchMode="singleTask" -->
+        <!-- android:screenOrientation="landscape" /> -->
+        <activity
+            android:name=".activity.VideoPlayActivity"
+            android:configChanges="orientation|screenSize|screenLayout|touchscreen|keyboardHidden|keyboard|layoutDirection"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="com.booyue.android.mediaplayer.video" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!--<data-->
+                <!--android:mimeType="video/*"-->
+                <!--android:pathPattern=".*\\.*"-->
+                <!--android:scheme="file" />-->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mediaplayer.VideoPlayerActivity"
+            android:configChanges="orientation|screenSize|screenLayout|touchscreen|keyboardHidden|keyboard|layoutDirection"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape">
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.VIEW" />-->
+            <!--<category android:name="android.intent.category.DEFAULT" />-->
+            <!--<data-->
+            <!--android:mimeType="video/*"-->
+            <!--android:pathPattern=".*\\.*"-->
+            <!--android:scheme="file" />-->
+            <!--</intent-filter>-->
+
+
+        </activity>
+
+        <!--<activity-->
+        <!--android:name=".activity.karaoke_test"-->
+        <!--android:launchMode="singleTask"-->
+        <!--android:screenOrientation="landscape" >-->
+        <!--</activity>-->
+    </application>
+
+</manifest>

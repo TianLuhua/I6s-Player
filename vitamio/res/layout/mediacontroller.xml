@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/dimen_47"-->
+        <!--android:background="@drawable/nav_spbf_bg">-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/ib_back_vitamio"-->
+            <!--android:layout_width="@dimen/dimen_69"-->
+            <!--android:layout_height="@dimen/dimen_21"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:background="@null"-->
+            <!--android:src="@drawable/nav_back_play" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_name_vitamio"-->
+            <!--android:layout_width="@dimen/dimen_336"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_toRightOf="@id/ib_back_vitamio"-->
+            <!--android:ellipsize="marquee"-->
+            <!--android:singleLine="true"-->
+            <!--android:textColor="@color/white_color"-->
+            <!--android:textSize="@dimen/text_46" />-->
+
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/ib_share_vitamio"-->
+            <!--android:layout_width="@dimen/dimen_27"-->
+            <!--android:layout_height="@dimen/dimen_27"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginRight="@dimen/dimen_17"-->
+            <!--android:background="@null"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:src="@drawable/btn_spbf_share" />-->
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/ib_like_vitamio"-->
+            <!--android:layout_width="@dimen/dimen_27"-->
+            <!--android:layout_height="@dimen/dimen_27"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginRight="@dimen/dimen_80"-->
+            <!--android:background="@null"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:src="@drawable/btn_spbf_heart_nor" />-->
+        <!--&lt;!&ndash;<ImageButton&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/ib_sleep_vitamio"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="@dimen/dimen_27"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="@dimen/dimen_27"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_toLeftOf="@id/ib_like_vitamio"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_centerVertical="true"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginRight="@dimen/dimen_30"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:background="@null"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:scaleType="fitXY"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:src="@drawable/btn_spbf_timing" />&ndash;&gt;-->
+
+
+    <!--</RelativeLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:background="@drawable/tab_spbf_bg_videoplay"-->
+        <!--android:paddingBottom="@dimen/dimen_3"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<SeekBar-->
+            <!--android:id="@+id/sb_progress_vitamio"-->
+            <!--style="@style/MySeekBar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/dimen_15"-->
+            <!--android:layout_marginTop="@dimen/dimen_4"-->
+            <!--android:max="100" />-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_currenttime_vitamio"-->
+                <!--android:layout_width="@dimen/dimen_49"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="@dimen/dimen_15"-->
+                <!--android:textColor="@color/white_color"-->
+                <!--android:textSize="@dimen/text_36" />-->
+
+            <!--<ImageButton-->
+                <!--android:id="@+id/ib_playmode_vitamio"-->
+                <!--android:layout_width="@dimen/dimen_27"-->
+                <!--android:layout_height="@dimen/dimen_27"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:layout_marginLeft="@dimen/dimen_90"-->
+                <!--android:background="@null"-->
+                <!--android:src="@drawable/btn_spbf_list_loop" />-->
+
+            <!--<ImageButton-->
+                <!--android:id="@+id/ib_prev_vitamio"-->
+                <!--android:layout_width="@dimen/dimen_30"-->
+                <!--android:layout_height="@dimen/dimen_18"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:layout_marginLeft="@dimen/dimen_50"-->
+                <!--android:background="@null"-->
+                <!--android:src="@drawable/btn_spbf_last_song" />-->
+
+
+            <!--<ImageButton-->
+                <!--android:id="@+id/ib_play_vitamio"-->
+                <!--android:layout_width="@dimen/dimen_35"-->
+                <!--android:layout_height="@dimen/dimen_35"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:background="@null"-->
+                <!--android:layout_marginLeft="@dimen/dimen_41"-->
+                <!--android:src="@drawable/btn_spbf_music_play" />-->
+
+            <!--<ImageButton-->
+                <!--android:id="@+id/ib_next_vitamio"-->
+                <!--android:layout_width="@dimen/dimen_30"-->
+                <!--android:layout_height="@dimen/dimen_18"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:background="@null"-->
+                <!--android:layout_marginLeft="@dimen/dimen_41"-->
+                <!--android:src="@drawable/btn_spbf_next_song" />-->
+
+            <!--<ImageButton-->
+                <!--android:id="@+id/ib_download_vitamio"-->
+                <!--android:layout_width="@dimen/dimen_27"-->
+                <!--android:layout_height="@dimen/dimen_27"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:layout_marginLeft="@dimen/dimen_41"-->
+                <!--android:background="@null"-->
+                <!--android:src="@drawable/btn_spbf_download_nor" />-->
+
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_durationtime_vitamio"-->
+                <!--android:layout_width="@dimen/dimen_0"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginRight="@dimen/dimen_15"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="right"-->
+                <!--android:textColor="@color/white_color"-->
+                <!--android:textSize="@dimen/text_36" />-->
+        <!--</LinearLayout>-->
+
+
+    <!--</LinearLayout>-->
+
+</RelativeLayout>

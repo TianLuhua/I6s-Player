@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.booyue.karaoke.mediaplayer.VideoView
+        android:id="@+id/videoview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/btn_select_track"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_100"
+        android:text="原唱"
+        android:layout_centerInParent="true"/>
+    <Button
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_60"
+        android:text="返回"
+        />
+      <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_60"
+          android:layout_below="@id/back"
+        android:text="下一首"
+        />
+
+
+</RelativeLayout>

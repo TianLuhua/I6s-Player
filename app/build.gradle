@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "com.booyue.karaoke"
+        minSdkVersion 19
+        targetSdkVersion 22
+        versionCode 103
+        versionName "100.0.3"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        release {
+            storeFile file(KEY_PATH)
+            storePassword KEY_PASS
+            keyAlias ALIAS_NAME
+            keyPassword ALIAS_PASS
+            v2SigningEnabled false
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    //重命名apk文件
+    def String apkName = defaultConfig.versionName + "_" + defaultConfig.versionCode as String
+
+    applicationVariants.all { variant ->
+
+        if (variant.buildType.name.equals('release') || variant.buildType.name.equals('debug')) {
+            variant.outputs.each { output ->
+                def appName = 'Karaoke'
+                def oldFile = output.outputFile
+                def buildName = ''
+                variant.productFlavors.each { product ->
+                    //循环取到的是productFlavors的每个名字，也是区分名字的关键
+                    buildName = product.name
+                }
+                def releaseApkName = appName + buildName + "_${apkName}.apk"
+//                output.outputFile = new File(oldFile.parent, releaseApkName)
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':vitamio')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile 'com.github.bumptech.glide:glide:3.5.2'
+
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.android.support:support-v4:25.2.0'
+}
