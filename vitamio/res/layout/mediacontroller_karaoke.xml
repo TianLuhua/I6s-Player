@@ -42,8 +42,7 @@
         layout="@layout/layout_volume_control"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/rl_nav"
-        android:visibility="invisible" />
+        android:layout_below="@id/rl_nav" />
 
 
     <RelativeLayout
@@ -164,8 +163,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginRight="@dimen/dimen_22"
         android:layout_marginTop="@dimen/dimen_99"
-        android:orientation="vertical"
-        android:visibility="invisible">
+        android:orientation="vertical">
 
         <FrameLayout
             android:layout_width="@dimen/dimen_105"
