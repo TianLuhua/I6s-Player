@@ -8,7 +8,7 @@
     <RelativeLayout
         android:id="@+id/rl_nav"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_67"
+        android:layout_height="@dimen/dimen_60"
         android:layout_alignParentTop="true"
         android:background="@drawable/actionbar_bg">
 
@@ -27,14 +27,6 @@
 
         </FrameLayout>
 
-        <!--<ImageButton-->
-        <!--android:id="@+id/ib_back_vitamio"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_marginLeft="@dimen/dimen_10"-->
-        <!--android:background="@color/transparent"-->
-        <!--android:src="@drawable/selector_back" />-->
-
         <TextView
             android:id="@+id/tv_name_vitamio"
             android:layout_width="wrap_content"
@@ -51,8 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/rl_nav"
-
-        ></include>
+        android:visibility="invisible" />
 
 
     <RelativeLayout
@@ -60,90 +51,103 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/lan"
+        android:background="@drawable/bg_mediacontroller"
         android:paddingTop="@dimen/dimen_10">
 
-        <TextView
-            android:id="@+id/tv_currenttime_vitamio"
+        <ImageView
+            android:id="@+id/ib_prev_vitamio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dimen_10"
-            android:text="00:00"
-            android:textColor="@color/video_time_color"
-            android:textSize="@dimen/text_14" />
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_32"
+            android:src="@drawable/mediacontorller_pre" />
 
-        <LinearLayout
+        <ImageView
+            android:id="@+id/ib_play_vitamio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_26"
+            android:layout_toRightOf="@+id/ib_prev_vitamio"
+            android:src="@drawable/selector_pause" />
 
-            <ImageView
-                android:id="@+id/ib_playmode_vitamio"
+        <ImageView
+            android:id="@+id/ib_next_vitamio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_26"
+            android:layout_toRightOf="@+id/ib_play_vitamio"
+            android:src="@drawable/mediacontorller_next" />
+
+
+        <RelativeLayout
+            android:id="@+id/ll_menu_progress"
+            android:layout_width="578dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_19"
+            android:layout_toRightOf="@+id/ib_next_vitamio">
+
+            <SeekBar
+                android:id="@+id/sb_progress_vitamio"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:maxHeight="@dimen/dimen_5"
+                android:minHeight="@dimen/dimen_5"
+                android:progressDrawable="@drawable/seekbar_mediacontorller"
+                android:splitTrack="false"
+                android:thumb="@drawable/seekbar_mediacontorller_thumb"
+                android:thumbOffset="@dimen/dimen_10" />
+
+            <TextView
+                android:id="@+id/tv_currenttime_vitamio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/dimen_210"
-                android:src="@drawable/selector_loop" />
+                android:layout_below="@+id/sb_progress_vitamio"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:text="00:00"
+                android:textColor="@color/video_time_color"
+                android:textSize="@dimen/text_18" />
 
-            <ImageView
-                android:id="@+id/ib_prev_vitamio"
+            <TextView
+                android:id="@+id/tv_durationtime_vitamio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/dimen_99"
-                android:src="@drawable/selector_pre" />
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/sb_progress_vitamio"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:text="00:00"
+                android:textColor="@color/video_time_color"
+                android:textSize="@dimen/text_18" />
+        </RelativeLayout>
 
-            <ImageView
-                android:id="@+id/ib_play_vitamio"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/dimen_61"
-                android:src="@drawable/selector_pause" />
 
-            <ImageView
-                android:id="@+id/ib_next_vitamio"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/dimen_61"
-                android:src="@drawable/selector_next" />
+        <ImageView
+            android:id="@+id/ib_playmode_vitamio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dimen_17"
+            android:layout_toRightOf="@+id/ll_menu_progress"
+            android:src="@drawable/selector_loop" />
 
-            <ImageView
-                android:id="@+id/img_media_volume"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/dimen_99"
-                android:src="@drawable/volum_adjust"></ImageView>
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/tv_durationtime_vitamio"
+        <ImageView
+            android:id="@+id/img_media_volume"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="@dimen/dimen_10"
-            android:text="00:00"
-            android:textColor="@color/video_time_color"
-            android:textSize="@dimen/text_14" />
-    </RelativeLayout>
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/dimen_25"
+            android:src="@drawable/mediacontorller_volume" />
 
-    <SeekBar
-        android:id="@+id/sb_progress_vitamio"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@id/ll_menu"
-        android:layout_marginTop="-23.0dip"
-        android:max="100"
-        android:maxHeight="@dimen/dimen_5"
-        android:minHeight="@dimen/dimen_5"
-        android:paddingEnd="0.0dip"
-        android:paddingStart="0.0dip"
-        android:progressDrawable="@drawable/po_seekbar"
-        android:splitTrack="false"
-        android:thumb="@drawable/point"
-        android:thumbOffset="@dimen/dimen_10" />
+    </RelativeLayout>
 
 
     <FrameLayout
@@ -160,7 +164,8 @@
         android:layout_alignParentRight="true"
         android:layout_marginRight="@dimen/dimen_22"
         android:layout_marginTop="@dimen/dimen_99"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="invisible">
 
         <FrameLayout
             android:layout_width="@dimen/dimen_105"
@@ -198,7 +203,6 @@
                 android:visibility="visible" />
 
         </FrameLayout>
-
 
         <ImageView
             android:id="@+id/img_microphone"

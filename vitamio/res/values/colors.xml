@@ -317,7 +317,7 @@
     <color name="navy">#000080</color>
     <!-- 海军色 -->
     <color name="black">#000000</color>
-    <color name="video_time_color">#2b2b2b</color>
+    <color name="video_time_color">#8b8b8b</color>
     <!-- 黑色 -->
 
 </resources>

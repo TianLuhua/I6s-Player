@@ -221,18 +221,18 @@ public class MediaController extends FrameLayout implements View.OnClickListener
     public void initPlayModeIcon(boolean isSwitch) {
         if (isSwitch) {
             if (STATE_PLAY_MODE == STATE_PLAY_MODE_SINGLE) {
-                ibPlayMode.setImageResource(R.drawable.loop);
+                ibPlayMode.setImageResource(R.drawable.mediacontorller_cycle);
                 STATE_PLAY_MODE = STATE_PLAY_MODE_LIST;
 
             } else if (STATE_PLAY_MODE == STATE_PLAY_MODE_LIST) {
-                ibPlayMode.setImageResource(R.drawable.loop_once);
+                ibPlayMode.setImageResource(R.drawable.mediacontorller_single);
                 STATE_PLAY_MODE = STATE_PLAY_MODE_SINGLE;
             }
         } else {
             if (STATE_PLAY_MODE == STATE_PLAY_MODE_SINGLE) {
-                ibPlayMode.setImageResource(R.drawable.loop_once);
+                ibPlayMode.setImageResource(R.drawable.mediacontorller_single);
             } else if (STATE_PLAY_MODE == STATE_PLAY_MODE_LIST) {
-                ibPlayMode.setImageResource(R.drawable.loop);
+                ibPlayMode.setImageResource(R.drawable.mediacontorller_cycle);
             }
         }
     }
@@ -571,10 +571,10 @@ public class MediaController extends FrameLayout implements View.OnClickListener
             return;
 
         if (mPlayer.isPlaying())
-            ibPlay.setImageResource(R.drawable.selector_pause);
+            ibPlay.setImageResource(R.drawable.mediacontorller_pause);
 //      mPauseButton.setImageResource(getResources().getIdentifier("mediacontroller_pause", "drawable", mContext.getPackageName()));
         else
-            ibPlay.setImageResource(R.drawable.selector_play);
+            ibPlay.setImageResource(R.drawable.mediacontorller_play);
 //      mPauseButton.setImageResource(getResources().getIdentifier("mediacontroller_play", "drawable", mContext.getPackageName()));
         initPlayModeIcon(false);
 
