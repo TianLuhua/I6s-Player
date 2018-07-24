@@ -877,17 +877,21 @@ public class MediaController extends FrameLayout implements View.OnClickListener
 //    }
 
     public void setVolume() {
-        final AudioManager mAudioManager = (AudioManager) mContext.getSystemService(Context.AUDIO_SERVICE);
-        //最大音量
-        final int maxVolume = mAudioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
-        //当前音量
-        int currentVolume = mAudioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
-//        int currentVolumeProgress = (int) ((float) currentVolume * 100 / maxVolume);
-        currentVolume = currentVolume + 1;
-        if (currentVolume > maxVolume) {
-            currentVolume = currentVolume - 2;
-        }
-        mAudioManager.setStreamVolume(AudioManager.STREAM_MUSIC, currentVolume, AudioManager.FX_KEY_CLICK);
+//        final AudioManager mAudioManager = (AudioManager) mContext.getSystemService(Context.AUDIO_SERVICE);
+//        //最大音量
+//        final int maxVolume = mAudioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+//        //当前音量
+//        int currentVolume = mAudioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
+////        int currentVolumeProgress = (int) ((float) currentVolume * 100 / maxVolume);
+//        currentVolume = currentVolume + 1;
+//        if (currentVolume > maxVolume) {
+//            currentVolume = currentVolume - 2;
+//        }
+//        mAudioManager.setStreamVolume(AudioManager.STREAM_MUSIC, currentVolume, AudioManager.FX_KEY_CLICK);
+        AudioManager audioMa = (AudioManager) mContext.getSystemService(Context.AUDIO_SERVICE);
+        audioMa.adjustStreamVolume(AudioManager.STREAM_MUSIC,
+                AudioManager.ADJUST_SAME, AudioManager.FLAG_PLAY_SOUND
+                        | AudioManager.FLAG_SHOW_UI);
     }
 
 
