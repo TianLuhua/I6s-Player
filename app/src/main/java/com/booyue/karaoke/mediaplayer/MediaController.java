@@ -386,9 +386,378 @@ public class MediaController extends FrameLayout implements View.OnClickListener
      * @param name
      */
     public void setFileName(String name) {
-        mTitle = name;
+
+//        mTitle = name;
+        mTitle = swapTitle(name);
         if (tvFileName != null)
             tvFileName.setText(mTitle);
+    }
+
+    /**
+     * 这个地方纯属瞎弄
+     *
+     * @param mTitle
+     * @return
+     */
+    private String swapTitle(String mTitle) {
+        //-----------------------多纳英语----------------------------start
+//        public static final String HHT_XT_ZJYY_DUONA_01 = HHT_XT_ZJYY_DUONA_ROOT_PATH + "zaoshanghao.mp4";
+//        public static final String HHT_XT_ZJYY_DUONA_02 = HHT_XT_ZJYY_DUONA_ROOT_PATH + "woshi.mp4";
+//        public static final String HHT_XT_ZJYY_DUONA_03 = HHT_XT_ZJYY_DUONA_ROOT_PATH + "meiweishuiguo.mp4";
+//        public static final String HHT_XT_ZJYY_DUONA_04 = HHT_XT_ZJYY_DUONA_ROOT_PATH + "rangwomenshuyishu.mp4";
+//        public static final String HHT_XT_ZJYY_DUONA_05 = HHT_XT_ZJYY_DUONA_ROOT_PATH + "shitoujiandaobu.mp4";
+//        public static final String HHT_XT_ZJYY_DUONA_06 = HHT_XT_ZJYY_DUONA_ROOT_PATH + "zhuomicang.mp4";
+//        public static final String HHT_XT_ZJYY_DUONA_07 = HHT_XT_ZJYY_DUONA_ROOT_PATH + "chuanshangyifu.mp4";
+//        public static final String HHT_XT_ZJYY_DUONA_08 = HHT_XT_ZJYY_DUONA_ROOT_PATH + "shangrikuaile.mp4";
+//        public static final String HHT_XT_ZJYY_DUONA_09 = HHT_XT_ZJYY_DUONA_ROOT_PATH + "wotule.mp4";
+//        public static final String HHT_XT_ZJYY_DUONA_10 = HHT_XT_ZJYY_DUONA_ROOT_PATH + "moxojiamshenmeyanse.mp4";
+//        public static final String HHT_XT_ZJYY_DUONA_11 = HHT_XT_ZJYY_DUONA_ROOT_PATH + "qudongwuyuan.mp4";
+//        public static final String HHT_XT_ZJYY_DUONA_12 = HHT_XT_ZJYY_DUONA_ROOT_PATH + "keaidedongwu.mp4";
+        //-----------------------多纳英语----------------------------end
+//
+//        //火火兔乐园---- 卡拉ok ---经典儿歌
+//        public static final String HHT_LY_KALAOK_JDEG_ROOT_PATH = "/system/videos/leyuan/kalaOK/jingdian/";
+//        public static final String HHT_LY_KALAOK_JDEG_ITEM_01 = HHT_LY_KALAOK_JDEG_ROOT_PATH + "fenshuajiang03.mkv";
+//        public static final String HHT_LY_KALAOK_JDEG_ITEM_02 = HHT_LY_KALAOK_JDEG_ROOT_PATH + "yifenqian09.mkv";
+//        public static final String HHT_LY_KALAOK_JDEG_ITEM_03 = HHT_LY_KALAOK_JDEG_ROOT_PATH + "woniuyuhuangliniao07.mkv";
+//        public static final String HHT_LY_KALAOK_JDEG_ITEM_04 = HHT_LY_KALAOK_JDEG_ROOT_PATH + "lingerxiangdingdang04.mkv";
+//        public static final String HHT_LY_KALAOK_JDEG_ITEM_05 = HHT_LY_KALAOK_JDEG_ROOT_PATH + "maliyouzhixiaoyanggao19.mkv";
+//        public static final String HHT_LY_KALAOK_JDEG_ITEM_06 = HHT_LY_KALAOK_JDEG_ROOT_PATH + "liangzhilaohu10.mkv";
+//        public static final String HHT_LY_KALAOK_JDEG_ITEM_07 = HHT_LY_KALAOK_JDEG_ROOT_PATH + "shishangzhiyoumamahao05.mkv";
+//        public static final String HHT_LY_KALAOK_JDEG_ITEM_08 = HHT_LY_KALAOK_JDEG_ROOT_PATH + "shuyazi06.mkv";
+//        public static final String HHT_LY_KALAOK_JDEG_ITEM_09 = HHT_LY_KALAOK_JDEG_ROOT_PATH + "aiwojiubaobaowo18.mkv";
+//        public static final String HHT_LY_KALAOK_JDEG_ITEM_10 = HHT_LY_KALAOK_JDEG_ROOT_PATH + "baluobo15.mkv";
+//        public static final String HHT_LY_KALAOK_JDEG_ITEM_11 = HHT_LY_KALAOK_JDEG_ROOT_PATH + "chuntianzainali01.mkv";
+//        public static final String HHT_LY_KALAOK_JDEG_ITEM_12 = HHT_LY_KALAOK_JDEG_ROOT_PATH + "lanjinling02.mkv";
+//        public static final String HHT_LY_KALAOK_JDEG_ITEM_13 = HHT_LY_KALAOK_JDEG_ROOT_PATH + "shijianzaishuohua17.mkv";
+//        public static final String HHT_LY_KALAOK_JDEG_ITEM_14 = HHT_LY_KALAOK_JDEG_ROOT_PATH + "woyouyigejia13.mkv";
+//        public static final String HHT_LY_KALAOK_JDEG_ITEM_15 = HHT_LY_KALAOK_JDEG_ROOT_PATH + "xiaolongren12.mkv";
+//        public static final String HHT_LY_KALAOK_JDEG_ITEM_16 = HHT_LY_KALAOK_JDEG_ROOT_PATH + "xiaoxingxing08.mkv";
+//        public static final String HHT_LY_KALAOK_JDEG_ITEM_17 = HHT_LY_KALAOK_JDEG_ROOT_PATH + "xiaoyanzi11.mkv";
+//        public static final String HHT_LY_KALAOK_JDEG_ITEM_18 = HHT_LY_KALAOK_JDEG_ROOT_PATH + "zhaopengyou14.mkv";
+//        public static final String HHT_LY_KALAOK_JDEG_ITEM_19 = HHT_LY_KALAOK_JDEG_ROOT_PATH + "zhongtaiyang20.mkv";
+//        public static final String HHT_LY_KALAOK_JDEG_ITEM_20 = HHT_LY_KALAOK_JDEG_ROOT_PATH + "zhuoniqiu16.mkv";
+//
+//        //火火兔乐园---- 卡拉ok ---原创儿歌
+//        public static final String HHT_LY_KALAOK_TTMTV_ROOT_PATH = "/system/videos/leyuan/kalaOK/yuanchuang/";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_01 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "daxiongmao01.mkv";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_02 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "chunyu02.mkv";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_03 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "chaojiyingxiong03.mkv";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_04 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "zhuqingting04.mkv";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_05 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "shangyuanzhuzhici05.mkv";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_06 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "shuyazi06.mkv";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_07 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "yinghuoweiguang07.mkv";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_08 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "bahe08.mkv";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_09 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "hello09.mkv";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_10 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "gongfuxiaozi10.mp4";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_11 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "xunyinzhibuyu11.mkv";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_12 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "xiaoxiaobinggan12.mkv";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_13 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "xiaohuajia13.mkv";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_14 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "shancunyonghuai14.mkv";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_15 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "gongxifacai15.mkv";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_16 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "mingnong16.mp4";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_17 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "jinglige17.mkv";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_18 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "chuntianzainali18.mkv";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_19 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "zhishuge19.mkv";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_20 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "aixiliangshi20.mkv";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_21 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "hua21.mkv";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_22 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "qiuyinong22.mkv";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_23 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "meilitianye23.mkv";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_24 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "laoshukaihui24.mkv";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_25 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "wuyixiang25.mkv";
+//        public static final String HHT_LY_KALAOK_TTMTV_ITEM_26 = HHT_LY_KALAOK_TTMTV_ROOT_PATH + "daguonian26.mkv";
+//
+//        //火火兔乐园---- 卡拉ok ----火火兔唱古诗
+//        public static final String HHT_LY_KALAOK_HHTCGS_ROOT_PATH = "/system/videos/leyuan/kalaOK/hhtcgs/";
+//        public static final String HHT_LY_KALAOK_HHTCGS_01 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "ye01.mp4";
+//        public static final String HHT_LY_KALAOK_HHTCGS_02 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "jys02.mp4";
+//        public static final String HHT_LY_KALAOK_HHTCGS_03 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "yr03.mp4";
+//        public static final String HHT_LY_KALAOK_HHTCGS_04 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "lzc04.mp4";
+//        public static final String HHT_LY_KALAOK_HHTCGS_05 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "cs05.mp4";
+//        public static final String HHT_LY_KALAOK_HHTCGS_06 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "bdd06.mp4";
+//        public static final String HHT_LY_KALAOK_HHTCGS_07 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "glyx07.mp4";
+//        public static final String HHT_LY_KALAOK_HHTCGS_08 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "fdgyclb08.mp4";
+//        public static final String HHT_LY_KALAOK_HHTCGS_09 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "xyzby09.mp4";
+//        public static final String HHT_LY_KALAOK_HHTCGS_10 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "xc10.mp4";
+//        public static final String HHT_LY_KALAOK_HHTCGS_11 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "sx11.mp4";
+//        public static final String HHT_LY_KALAOK_HHTCGS_12 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "jhzs12.mp4";
+//        public static final String HHT_LY_KALAOK_HHTCGS_13 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "zfbdc13.mp4";
+//        public static final String HHT_LY_KALAOK_HHTCGS_14 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "zccsb14.mp4";
+//        public static final String HHT_LY_KALAOK_HHTCGS_15 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "cyxy15.mp4";
+//        public static final String HHT_LY_KALAOK_HHTCGS_16 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "cx16.mp4";
+//        public static final String HHT_LY_KALAOK_HHTCGS_17 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "wlspb17.mp4";
+//        public static final String HHT_LY_KALAOK_HHTCGS_18 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "fqyb18.mp4";
+//        public static final String HHT_LY_KALAOK_HHTCGS_19 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "jpdbxh19.mp4";
+//        public static final String HHT_LY_KALAOK_HHTCGS_20 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "jx20.mp4";
+//        public static final String HHT_LY_KALAOK_HHTCGS_21 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "yzy21.mp4";
+//        public static final String HHT_LY_KALAOK_HHTCGS_22 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "dgql22.mp4";
+//        public static final String HHT_LY_KALAOK_HHTCGS_23 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "jj23.mp4";
+//        public static final String HHT_LY_KALAOK_HHTCGS_24 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "cgx24.mp4";
+//        public static final String HHT_LY_KALAOK_HHTCGS_25 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "cgx24.mp4";
+//        public static final String HHT_LY_KALAOK_HHTCGS_26 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "cgx24.mp4";
+
+
+        switch (mTitle) {
+            //-----------------------多纳英语----------------------------start
+            case "zaoshanghao":
+                mTitle = "01.早上好";
+                break;
+            case "woshi":
+                mTitle = "02.我是";
+                break;
+            case "meiweishuiguo":
+                mTitle = "03.美味的水果";
+                break;
+            case "rangwomenshuyishu":
+                mTitle = "04.我们数数";
+                break;
+            case "shitoujiandaobu":
+                mTitle = "05.石头剪刀布";
+                break;
+            case "zhuomicang":
+                mTitle = "06.捉迷藏";
+                break;
+            case "chuanshangyifu":
+                mTitle = "07.穿上衣服";
+                break;
+            case "shangrikuaile":
+                mTitle = "08.生日快乐";
+                break;
+            case "wotule":
+                mTitle = "09.我涂了";
+                break;
+            case "moxojiamshenmeyanse":
+                mTitle = "10.你喜欢什么颜色";
+                break;
+            case "qudongwuyuan":
+                mTitle = "11.去动物园";
+                break;
+            case "keaidedongwu":
+                mTitle = "12.可爱的动物";
+                break;
+            //-----------------------多纳英语----------------------------end---------强大的分割线
+
+            //---------火火兔乐园---- 卡拉ok ---经典儿歌-----------------start
+            case "fenshuajiang03":
+                mTitle = "01.粉刷匠";
+                break;
+            case "yifenqian09":
+                mTitle = "02.一分钱";
+                break;
+            case "woniuyuhuangliniao07":
+                mTitle = "03.蜗牛与黄鹂鸟";
+                break;
+            case "lingerxiangdingdang04":
+                mTitle = "04.铃儿响叮当";
+                break;
+            case "maliyouzhixiaoyanggao19":
+                mTitle = "05.玛丽有只小羊羔";
+                break;
+            case "liangzhilaohu10":
+                mTitle = "06.两只老虎";
+                break;
+            case "shishangzhiyoumamahao05":
+                mTitle = "07.世上只有妈妈好";
+                break;
+            case "shuyazi06":
+                mTitle = "数鸭子";
+                break;
+            case "aiwojiubaobaowo18":
+                mTitle = "09.爱我你就抱抱我";
+                break;
+            case "baluobo15":
+                mTitle = "10.拔萝卜";
+                break;
+            case "chuntianzainali01":
+                mTitle = "11.春天在哪里";
+                break;
+            case "lanjinling02":
+                mTitle = "12.蓝精灵";
+                break;
+            case "shijianzaishuohua17":
+                mTitle = "13.时钟在说话";
+                break;
+            case "woyouyigejia13":
+                mTitle = "14.我有一个家";
+                break;
+            case "xiaolongren12":
+                mTitle = "15.小龙人";
+                break;
+            case "xiaoxingxing08":
+                mTitle = "16.小星星";
+                break;
+            case "xiaoyanzi11":
+                mTitle = "17.小燕子";
+                break;
+            case "zhaopengyou14":
+                mTitle = "18.找朋友";
+                break;
+            case "zhongtaiyang20":
+                mTitle = "19.种太阳";
+                break;
+            case "zhuoniqiu16":
+                mTitle = "20.捉泥鳅";
+                break;
+            //---------火火兔乐园---- 卡拉ok ---经典儿歌-----------------end----------强大的分割线
+            //---------火火兔乐园---- 卡拉ok ---原创儿歌-----------------start
+            case "daxiongmao01":
+                mTitle = "01.大熊猫";
+                break;
+            case "chunyu02":
+                mTitle = "02.春雨";
+                break;
+            case "chaojiyingxiong03":
+                mTitle = "03.超级英雄";
+                break;
+            case "zhuqingting04":
+                mTitle = "04.竹蜻蜓";
+                break;
+            case "shangyuanzhuzhici05":
+                mTitle = "05.上元竹枝词";
+                break;
+//经典儿歌 中的第八条重复
+//            case "shuyazi06":
+//                mTitle = "06.数鸭子";
+//                break;
+            case "yinghuoweiguang07":
+                mTitle = "07.萤火微光";
+                break;
+            case "bahe08":
+                mTitle = "08.拔河";
+                break;
+            case "hello09":
+                mTitle = "09.hello";
+                break;
+            case "gongfuxiaozi10":
+                mTitle = "10.功夫小子";
+                break;
+            case "xunyinzhibuyu11":
+                mTitle = "11.寻隐者不遇";
+                break;
+            case "xiaoxiaobinggan12":
+                mTitle = "12.小小饼干";
+                break;
+            case "xiaohuajia13":
+                mTitle = "13.小画家";
+                break;
+            case "shancunyonghuai14":
+                mTitle = "14.山村咏怀";
+                break;
+            case "gongxifacai15":
+                mTitle = "15.恭喜发财";
+                break;
+            case "mingnong16":
+                mTitle = "16.悯农";
+                break;
+            case "jinglige17":
+                mTitle = "17.敬礼歌";
+                break;
+            case "chuntianzainali18":
+                mTitle = "18.春天在哪里";
+                break;
+            case "zhishuge19":
+                mTitle = "19.植树歌";
+                break;
+            case "aixiliangshi20":
+                mTitle = "20.爱惜粮食";
+                break;
+            case "hua21":
+                mTitle = "21.画";
+                break;
+            case "qiuyinong22":
+                mTitle = "22.秋意浓";
+                break;
+            case "meilitianye23":
+                mTitle = "23.美丽的田野";
+                break;
+            case "laoshukaihui24":
+                mTitle = "24.老鼠开会";
+                break;
+            case "wuyixiang25":
+                mTitle = "25.乌衣巷";
+                break;
+            case "daguonian26":
+                mTitle = "26.过大年";
+                break;
+            //---------火火兔乐园---- 卡拉ok ---原创儿歌-----------------end----------强大的分割线
+
+            //---------火火兔乐园---- 卡拉ok ---火火兔唱古诗-----------------start
+            case "ye01":
+                mTitle = "08.咏鹅";
+                break;
+            case "jys02":
+                mTitle = "02.静夜思";
+                break;
+            case "yr03":
+                mTitle = "03.元日";
+                break;
+            case "lzc04":
+                mTitle = "04.凉州词";
+                break;
+            case "cs05":
+                mTitle = "05.出塞";
+                break;
+            case "bdd06":
+                mTitle = "06.别董大";
+                break;
+            case "glyx07":
+                mTitle = "07.古朗月行";
+                break;
+            case "fdgyclb08":
+                mTitle = "01.赋得古原草送别";
+                break;
+            case "xyzby09":
+                mTitle = "09.寻隐者不遇";
+                break;
+            case "xc10":
+                mTitle = "10.小池";
+                break;
+            case "sx11":
+                mTitle = "11.山行";
+                break;
+            case "jhzs12":
+                mTitle = "12.己亥杂诗";
+                break;
+            case "zfbdc13":
+                mTitle = "13.早发白帝城";
+                break;
+            case "zccsb14":
+                mTitle = "14.早春呈水部张十八员外";
+                break;
+            case "cyxy15":
+                mTitle = "15.春夜喜雨";
+                break;
+            case "cx16":
+                mTitle = "16.春晓";
+                break;
+            case "wlspb17":
+                mTitle = "17.望庐山瀑布";
+                break;
+            case "fqyb18":
+                mTitle = "18.枫桥夜泊";
+                break;
+            case "jpdbxh19":
+                mTitle = "19.江畔独步寻花";
+                break;
+            case "jx20":
+                mTitle = "20.江雪";
+                break;
+            case "yzy21":
+                mTitle = "21.游子吟";
+                break;
+            case "dgql22":
+                mTitle = "22.登鹳雀楼";
+                break;
+            case "jj23":
+                mTitle = "23.绝句";
+                break;
+            case "cgx24":
+                mTitle = "24.长歌行";
+                break;
+
+            //---------火火兔乐园---- 卡拉ok ---火火兔唱古诗-----------------end----------强大的分割线
+        }
+        return mTitle;
     }
 
     /**
