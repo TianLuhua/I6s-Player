@@ -2,13 +2,19 @@ package com.booyue.karaoke.activity;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
+import android.util.Log;
 import android.view.KeyEvent;
 
 import com.booyue.karaoke.R;
 import com.booyue.karaoke.mediaplayer.MediaController;
 import com.booyue.karaoke.mediaplayer.VitamioVideoView;
 import com.booyue.karaoke.utils.LoggerUtils;
+import com.booyue.karaoke.utils.VideoUtils;
 
+import java.io.File;
+import java.lang.reflect.Field;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -18,7 +24,7 @@ import java.util.List;
  * @author wangxinhua
  */
 public class VideoPlayActivity extends BaseActivity implements MediaController.MediaPlayerUIListener
-        , VitamioVideoView.OnVideoErrorListener,  MediaPlayer.OnInfoListener, MediaPlayer.OnPreparedListener,
+        , VitamioVideoView.OnVideoErrorListener, MediaPlayer.OnInfoListener, MediaPlayer.OnPreparedListener,
         MediaPlayer.OnCompletionListener {
     /**
      * 视频播放对象
@@ -34,9 +40,9 @@ public class VideoPlayActivity extends BaseActivity implements MediaController.M
     private long mCurPos;//播放进度
     private boolean isBuffering = false;
     private int position = 0;//播放哪个视频
-//    private AudioRecordHandler audioRecordHandler;
+    //    private AudioRecordHandler audioRecordHandler;
 //    private AudioPlayHandler audioPlayHandler;
-    private List<String> videoInfoList;
+    private List<String> videoInfoList = new ArrayList<>();
     //    private HeadsetPlugReceiver headsetPlugReceiver;
     //    private MediaRecorder recorder;
 
@@ -68,9 +74,27 @@ public class VideoPlayActivity extends BaseActivity implements MediaController.M
 
 
     private void getDataFromActivity() {
-        Intent i = getIntent();
-        videoInfoList = i.getStringArrayListExtra("videoInfoList");
-        position = i.getIntExtra("position", 0);
+
+        Uri uri = getIntent().getData();
+        String path = uri.getPath();
+        int startIndex = path.lastIndexOf("/");
+        File rootFile = new File(path.substring(0, startIndex));
+        String rootPath = rootFile.getPath();
+        for (String s : rootFile.list()) {
+            String childPath = rootPath + "/" + s;
+            //系统支持：mp4、mkv格式
+            if (childPath.endsWith("mp4") || childPath.endsWith("mkv")) {
+                videoInfoList.add(childPath);
+//                Log.e("tlh", "getDataFromActivity:" + childPath);
+            }
+
+        }
+        position = videoInfoList.indexOf(path);
+//        Log.e("tlh", "getDataFromActivity--position:" + position);
+//        Intent i = getIntent();
+//        videoInfoList = i.getStringArrayListExtra("videoInfoList");
+//        position = i.getIntExtra("position", 0);
+
     }
 
     /**
@@ -109,16 +133,16 @@ public class VideoPlayActivity extends BaseActivity implements MediaController.M
         String videoPath = videoInfoList.get(position);
         int startIndex = videoPath.lastIndexOf("/");
         int endIndex = videoPath.lastIndexOf(".");
-        String videoName = videoPath.substring(startIndex + 1,endIndex);
-//        if (videoName.contains(".")) {
-//            int lastIndexOfDot = videoName.lastIndexOf(".");
-//            videoView.setName(videoName.substring(0, lastIndexOfDot));
-//        }
+        String videoName = videoPath.substring(startIndex + 1, endIndex);
+////        if (videoName.contains(".")) {
+////            int lastIndexOfDot = videoName.lastIndexOf(".");
+////            videoView.setName(videoName.substring(0, lastIndexOfDot));
+////        }
         videoView.setName(videoName);
         videoView.setVideoPath(videoPath);
         videoView.requestFocus();
         videoView.start();
-        LoggerUtils.d(TAG + "视频名称：" + videoName);
+//        LoggerUtils.d(TAG + "视频名称：" + videoName);
         LoggerUtils.d(TAG + "视频路径：" + videoPath);
         /**modify by : 2017/11/8 17:31 针对于普通视频和kalaoke视频不同来隐藏伴奏视图*/
     }
@@ -133,7 +157,7 @@ public class VideoPlayActivity extends BaseActivity implements MediaController.M
     @Override
     protected void onResume() {
         super.onResume();
-        if(mMediaController != null){
+        if (mMediaController != null) {
             mMediaController.registerReceiver(this.getApplicationContext());
         }
         if (videoView != null && mCurPos != 0) {
@@ -146,7 +170,7 @@ public class VideoPlayActivity extends BaseActivity implements MediaController.M
      */
     @Override
     protected void onPause() {
-        if(mMediaController != null){
+        if (mMediaController != null) {
             mMediaController.registerReceiver(this.getApplicationContext());
         }
         mMediaController.unregisterReceiver(this.getApplicationContext());
