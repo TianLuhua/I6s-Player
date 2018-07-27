@@ -756,6 +756,128 @@ public class MediaController extends FrameLayout implements View.OnClickListener
                 break;
 
             //---------火火兔乐园---- 卡拉ok ---火火兔唱古诗-----------------end----------强大的分割线
+            //---------火火兔乐园---- 艺术培养 -------艺术之旅----------start---------
+            case "":
+                mTitle = "世界名画1";
+                break;
+            case "0":
+                mTitle = "世界名画2";
+                break;
+            case "1":
+                mTitle = "世界名画3";
+                break;
+            case "2":
+                mTitle = "世界名画4";
+                break;
+            case "3":
+                mTitle = "世界名画5";
+                break;
+            case "4":
+                mTitle = "著名雕塑欣赏";
+                break;
+            //---------火火兔乐园---- 艺术培养 --------艺术之旅---------end---------强大的分割线
+
+            //---------火火兔乐园---- 艺术培养 -------小小画家----------start---------
+            case "5":
+                mTitle = "01.小螃蟹";
+                break;
+            case "6":
+                mTitle = "02.小蜜蜂";
+                break;
+            case "7":
+                mTitle = "03.小母鸡";
+                break;
+            case "8":
+                mTitle = "04.小奶牛";
+                break;
+            case "9":
+                mTitle = "05.小鱼";
+                break;
+            case "10":
+                mTitle = "06.小猴子";
+                break;
+            case "11":
+                mTitle = "07.小猪";
+                break;
+            case "12":
+                mTitle = "08.小花猫";
+                break;
+            case "13":
+                mTitle = "09.小长颈鹿";
+                break;
+            case "14":
+                mTitle = "10.急救包";
+                break;
+            case "15":
+                mTitle = "11.青蛙";
+                break;
+            case "16":
+                mTitle = "12.乱涂乱画";
+                break;
+            case "17":
+                mTitle = "13.彩虹";
+                break;
+            case "18":
+                mTitle = "14.爱护树林";
+                break;
+            case "19":
+                mTitle = "15.水墨画";
+                break;
+            case "20":
+                mTitle = "16.我想要长大";
+                break;
+            case "21":
+                mTitle = "17.宇宙";
+                break;
+            case "22":
+                mTitle = "18.大公鸡";
+                break;
+            //---------火火兔乐园---- 艺术培养 -------小小画家----------edn--------强大的分割线
+
+            //---------火火兔乐园---- 艺术培养 -------律动儿歌----------start---------
+
+            case "23":
+                mTitle = "01.铃儿响叮当";
+                break;
+            case "24":
+                mTitle = "02.冰糖葫芦";
+                break;
+            case "25":
+                mTitle = "03.拍照片";
+                break;
+            case "26":
+                mTitle = "04.萤火微光";
+                break;
+            case "27":
+                mTitle = "05.恭喜发财鸡";
+                break;
+            case "28":
+                mTitle = "06.叮咚来了";
+                break;
+            case "29":
+                mTitle = "07.竹蜻蜓";
+                break;
+            case "30":
+                mTitle = "08.超级英雄";
+                break;
+            case "31":
+                mTitle = "09.旋转木马";
+                break;
+            case "32":
+                mTitle = "10.运动歌";
+                break;
+            case "33":
+                mTitle = "11.数鸭子";
+                break;
+            case "34":
+                mTitle = "12.闹铃叮当响";
+                break;
+            case "35":
+                mTitle = "13.欢乐火火兔";
+                break;
+            //---------火火兔乐园---- 艺术培养 -------律动儿歌----------edn--------强大的分割线
+
+
         }
         return mTitle;
     }
