@@ -51,6 +51,7 @@
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="video/*" />
                 <data android:mimeType="audio/*" />
                 <!--<data-->
@@ -80,6 +81,23 @@
 
 
         </activity>
+        <activity
+            android:name=".PicturePlayer.PicturePlayerActivity"
+            android:configChanges="orientation|screenSize|screenLayout|touchscreen|keyboardHidden|keyboard|layoutDirection"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+                <!--<data-->
+                <!--android:mimeType="video/*"-->
+                <!--android:pathPattern=".*\\.*"-->
+                <!--android:scheme="file" />-->
+            </intent-filter>
+        </activity>
+
 
         <!--<activity-->
         <!--android:name=".activity.karaoke_test"-->
