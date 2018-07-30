@@ -1,18 +1,15 @@
 package com.booyue.karaoke.PicturePlayer;
 
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewTreeObserver;
-import android.widget.ImageView;
 
 import com.booyue.karaoke.R;
 import com.booyue.karaoke.base.AbstractMVPActivity;
-import com.booyue.karaoke.utils.LoggerUtils;
+import com.github.chrisbanes.photoview.PhotoView;
 
-import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -23,11 +20,11 @@ public class PicturePlayerActivity extends AbstractMVPActivity<PicturePlayerView
 
     public final String TAG = PicturePlayerActivity.class.getSimpleName();
 
-    private ImageView imageView;
+    private PhotoView imageView;
     private PicturePlayController controller;
 
     private int position;
-    private List<String> imageInfoList = new ArrayList<>();
+    private List<String> imageInfoList;
 
     @Override
     protected int getContentViewID() {
@@ -54,32 +51,10 @@ public class PicturePlayerActivity extends AbstractMVPActivity<PicturePlayerView
             }
         });
 
-        getDataFromActivity();
-        imageView.setImageBitmap(BitmapFactory.decodeFile(imageInfoList.get(position)));
+        getPresenter().getData(getIntent().getData());
+
     }
 
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        controller.show();
-    }
-
-    private void getDataFromActivity() {
-        Uri uri = getIntent().getData();
-        String path = uri.getPath();
-        int startIndex = path.lastIndexOf("/");
-        File rootFile = new File(path.substring(0, startIndex));
-        String rootPath = rootFile.getPath();
-        for (String s : rootFile.list()) {
-            String childPath = rootPath + "/" + s;
-            //系统支持：jpg、png
-            if (childPath.endsWith(".jpg") || childPath.endsWith(".png")) {
-                imageInfoList.add(childPath);
-            }
-        }
-        position = imageInfoList.indexOf(path);
-    }
 
     /**
      * 1.获取具体的bitmap
@@ -89,12 +64,11 @@ public class PicturePlayerActivity extends AbstractMVPActivity<PicturePlayerView
         String videoPath = imageInfoList.get(position);
         int startIndex = videoPath.lastIndexOf("/");
         int endIndex = videoPath.lastIndexOf(".");
-        String videoName = videoPath.substring(startIndex + 1, endIndex);
-//        videoView.setName(videoName);
-//        videoView.setVideoPath(videoPath);
-//        videoView.requestFocus();
-//        videoView.start();
-        LoggerUtils.d(TAG + "视频路径：" + videoPath);
+        String imageName = videoPath.substring(startIndex + 1, endIndex);
+        if (controller == null)
+            return;
+        controller.setCurrentFileName(imageName);
+        controller.setCurrentFilePage(imageInfoList.size(), position);
     }
 
     @Override
@@ -111,23 +85,51 @@ public class PicturePlayerActivity extends AbstractMVPActivity<PicturePlayerView
     @Override
     public void onPrev() {
         Log.e("PicturePlayerActivity", "onPrev");
-
-
+        getPresenter().getData(position--);
     }
 
     @Override
     public void onNext() {
         Log.e("PicturePlayerActivity", "onNext");
-
+        getPresenter().getData(position++);
     }
 
     @Override
     public void onRotate() {
+        imageView.setRotationBy(90);
         Log.e("PicturePlayerActivity", "onRotate");
     }
 
     @Override
     public void onPlay() {
         Log.e("PicturePlayerActivity", "onPlay");
+        getPresenter().changPlayModle();
+    }
+
+    @Override
+    public void setData(final List<String> imageInfoList, final int position) {
+        this.imageInfoList = imageInfoList;
+        this.position = position;
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                imageView.setImageBitmap(BitmapFactory.decodeFile(imageInfoList.get(position)));
+                updateUI();
+            }
+        });
+    }
+
+    @Override
+    public void setData(final Bitmap bitmap, final String name, final int total, final int position) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Log.e("PicturePlayerActivity", "position:"+position);
+                imageView.setImageBitmap(bitmap);
+                controller.setCurrentFileName(name);
+                controller.setCurrentFilePage(total, position);
+            }
+        });
+
     }
 }

@@ -28,6 +28,7 @@ import io.vov.vitamio.utils.Log;
 public class PicturePlayController extends FrameLayout implements View.OnClickListener {
 
     private static final int FADE_OUT = 0x0001;
+
     private static final int DEFAULTTIMEOUT = 3000;
 
     private View mAnchor;
@@ -38,6 +39,7 @@ public class PicturePlayController extends FrameLayout implements View.OnClickLi
     private boolean mShowing;
     private PopupWindow mWindow;
     private int mAnimStyle;
+
 
 
     private FrameLayout flPictrue;
@@ -258,6 +260,20 @@ public class PicturePlayController extends FrameLayout implements View.OnClickLi
                 Log.e("setWindowLayoutType", e);
             }
         }
+    }
+
+    public void setCurrentFileName(String fileName) {
+        if (name == null)
+            return;
+        name.setText(fileName);
+    }
+
+    public void setCurrentFilePage(int total, int current) {
+        if (page == null)
+            return;
+        String str = String.format("%s/%s", String.valueOf(current), String.valueOf(total));
+        page.setText(str);
+
     }
 
 
