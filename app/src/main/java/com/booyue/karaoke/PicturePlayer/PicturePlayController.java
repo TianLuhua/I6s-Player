@@ -8,7 +8,6 @@ import android.os.Message;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
@@ -84,20 +83,17 @@ public class PicturePlayController extends FrameLayout implements View.OnClickLi
      */
     public PicturePlayController(Context context) {
         super(context);
-        Log.e("PicturePlayController---PicturePlayController");
         if (!mFromXml && initController(context))
             initFloatingWindow();
 
     }
 
     private boolean initController(Context context) {
-        Log.e("PicturePlayController---initController");
         mContext = context.getApplicationContext();
         return true;
     }
 
     private void initFloatingWindow() {
-        Log.e("PicturePlayController---initFloatingWindow");
         mWindow = new PopupWindow(mContext);
         mWindow.setFocusable(false);
         mWindow.setBackgroundDrawable(null);
@@ -109,13 +105,11 @@ public class PicturePlayController extends FrameLayout implements View.OnClickLi
     @Override
     public void onFinishInflate() {
         super.onFinishInflate();
-        Log.e("PicturePlayController---onFinishInflate");
         if (mRoot != null)
             initControllerView(mRoot);
     }
 
     public void setAnchorView(View view) {
-        Log.e("PicturePlayController---setAnchorView");
         mAnchor = view;
         if (!mFromXml) {
             removeAllViews();
@@ -128,7 +122,6 @@ public class PicturePlayController extends FrameLayout implements View.OnClickLi
     }
 
     protected View makeControllerView() {
-        Log.e("PicturePlayController---makeControllerView");
         return ((LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(getResources().getIdentifier("picturecontroller_karaoke", "layout", mContext.getPackageName()), this);
     }
 
@@ -187,7 +180,6 @@ public class PicturePlayController extends FrameLayout implements View.OnClickLi
                 show();
                 break;
             case R.id.fl_picture:
-                Log.e("PicturePlayController---flPictrue:" + mShowing);
                 if (isShowing()) {
                     hide();
                 } else {
@@ -217,12 +209,10 @@ public class PicturePlayController extends FrameLayout implements View.OnClickLi
     }
 
     public void show(int timeout) {
-        Log.e("PicturePlayController---1111----show:" + timeout);
         if (!mShowing && mAnchor != null && mAnchor.getWindowToken() != null) {
             if (play != null)
                 play.requestFocus();
             if (mFromXml) {
-                Log.e("PicturePlayController---show-------FromXml-----");
                 setVisibility(View.VISIBLE);
             } else {
                 int[] location = new int[2];
@@ -236,8 +226,6 @@ public class PicturePlayController extends FrameLayout implements View.OnClickLi
             mShowing = true;
             if (mShownListener != null)
                 mShownListener.onShown();
-        } else {
-            Log.e("PicturePlayController----------222222222---------show");
         }
 //        updatePausePlay();
         if (timeout != 0) {
@@ -247,7 +235,6 @@ public class PicturePlayController extends FrameLayout implements View.OnClickLi
     }
 
     public void show() {
-        Log.e("PicturePlayController-------show:" + mShowing);
         show(DEFAULTTIMEOUT);
     }
 

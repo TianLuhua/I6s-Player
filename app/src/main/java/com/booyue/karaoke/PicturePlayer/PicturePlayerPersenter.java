@@ -4,8 +4,6 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.NonNull;
-import android.util.Log;
 
 import com.booyue.karaoke.base.AbstractPresenter;
 import com.github.chrisbanes.photoview.PhotoView;

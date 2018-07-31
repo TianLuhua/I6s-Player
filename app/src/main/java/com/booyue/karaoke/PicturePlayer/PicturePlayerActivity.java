@@ -1,7 +1,6 @@
 package com.booyue.karaoke.PicturePlayer;
 
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewTreeObserver;
 
@@ -69,7 +68,6 @@ public class PicturePlayerActivity extends AbstractMVPActivity<PicturePlayerView
 
     @Override
     public void onBack() {
-        Log.e("PicturePlayerActivity", "onBack");
         if (controller.isShowing())
             controller.hide();
         this.finish();
@@ -86,35 +84,28 @@ public class PicturePlayerActivity extends AbstractMVPActivity<PicturePlayerView
 
     @Override
     public void onNext() {
-        Log.e("PicturePlayerActivity", "onNext--1111-position:" + position);
         if (position > imageInfoList.size() - 1) {
-            Log.e("PicturePlayerActivity", "onNext--2222-position:" + position);
             return;
         }
         position++;
-        Log.e("PicturePlayerActivity", "onNext--3333-position:" + position);
         viewPager.setCurrentItem(position);
     }
 
     @Override
     public void onRotate() {
         if (currentPhotoView == null) {
-            Log.e("PicturePlayerActivity", "currentPhotoView == null");
             return;
         }
         currentPhotoView.setRotationBy(90);
-        Log.e("PicturePlayerActivity", "onRotate");
     }
 
     @Override
     public void onPlay() {
-        Log.e("PicturePlayerActivity", "onPlay");
         getPresenter().changPlayModle();
     }
 
     @Override
     public void setData(final List<PhotoView> imageInfoList, final int position) {
-        Log.e("PicturePlayerActivity", "setData---position:" + position);
         this.imageInfoList = imageInfoList;
         this.position = position + 1;
         runOnUiThread(new Runnable() {
@@ -136,7 +127,6 @@ public class PicturePlayerActivity extends AbstractMVPActivity<PicturePlayerView
 
     @Override
     public void setCureentPage(int page, int palyModle) {
-        Log.e("PicturePlayerActivity", "setCureentPage---position：" + palyModle);
         viewPager.setCurrentItem(page, false);
         controller.updatePausePlay(palyModle == PicturePlayController.PLAYMODLE_LOOP);
     }
@@ -148,7 +138,6 @@ public class PicturePlayerActivity extends AbstractMVPActivity<PicturePlayerView
 
     @Override
     public void onPageSelected(int position) {
-        Log.e("PicturePlayerActivity", "onPageSelected---position：" + position);
         this.position = position;
         this.currentPhotoView = imageInfoList.get(position);
         getPresenter().setCureentPage(position);
@@ -159,5 +148,12 @@ public class PicturePlayerActivity extends AbstractMVPActivity<PicturePlayerView
     @Override
     public void onPageScrollStateChanged(int state) {
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (controller != null)
+            controller.release();
     }
 }

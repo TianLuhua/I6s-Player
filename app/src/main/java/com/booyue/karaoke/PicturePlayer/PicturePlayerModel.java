@@ -25,6 +25,8 @@ import java.util.List;
 import javax.crypto.spec.IvParameterSpec;
 import javax.security.auth.callback.Callback;
 
+import io.vov.vitamio.utils.Log;
+
 
 /**
  * Created by Tianluhua on 2018\7\30 0030.
@@ -47,12 +49,13 @@ public class PicturePlayerModel implements BaseModel {
         String path = uri.getPath();
         int startIndex = path.lastIndexOf("/");
         File rootFile = new File(path.substring(0, startIndex));
+        String chooseFilePath=path.substring(startIndex+1, path.length());
         String rootPath = rootFile.getPath();
         imageInfoList.clear();
         imagePaths.clear();
         for (String s : rootFile.list()) {
             String childPath = rootPath + "/" + s;
-            imagePaths.add(childPath);
+            imagePaths.add(s);
             //系统支持：jpg、png
             if (childPath.endsWith(".jpg") || childPath.endsWith(".png") || childPath.endsWith(".bmp")) {
                 View itemView = LayoutInflater.from(mContext).inflate(R.layout.item_pictureactivity_viewpager, null);
@@ -68,7 +71,7 @@ public class PicturePlayerModel implements BaseModel {
                 imageInfoList.add(photoView);
             }
         }
-        position = imagePaths.indexOf(path);
+        position = imagePaths.indexOf(chooseFilePath);
         if (callback == null)
             return;
         callback.setData(imageInfoList, position);
