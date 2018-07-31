@@ -53,7 +53,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data android:mimeType="video/*" />
-                <data android:mimeType="audio/*" />
                 <!--<data-->
                 <!--android:mimeType="video/*"-->
                 <!--android:pathPattern=".*\\.*"-->
