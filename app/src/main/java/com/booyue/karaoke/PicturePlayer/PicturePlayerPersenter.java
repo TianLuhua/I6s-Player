@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
+import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.booyue.karaoke.base.AbstractPresenter;
@@ -31,13 +32,11 @@ public class PicturePlayerPersenter extends AbstractPresenter<PicturePlayerView>
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case LOOP_PLAY:
-
-                    if (position > model.getDataSizi() - 1)
-                        position = 0;
                     if (getView() == null)
                         return;
-                    getView().setCureentPage(position++, CURRENT_PLAYMODLE);
-
+                    if (position > model.getDataSizi() - 1)
+                        position = 0;
+                    getView().setCureentPage(position, CURRENT_PLAYMODLE);
                     loopPlay();
                     break;
 
@@ -87,6 +86,7 @@ public class PicturePlayerPersenter extends AbstractPresenter<PicturePlayerView>
         mHandler.removeMessages(LOOP_PLAY);
         if (isLoopPlay) {
             getView().setCureentPage(position, CURRENT_PLAYMODLE);
+            position++;
             mHandler.sendMessageDelayed(mHandler.obtainMessage(LOOP_PLAY), loopTime);
         }
     }
@@ -97,4 +97,13 @@ public class PicturePlayerPersenter extends AbstractPresenter<PicturePlayerView>
         }
     }
 
+    public String getImagePaths(int currentItem) {
+        if (model == null) return "";
+        return model.getImagePaths().get(currentItem);
+    }
+
+    public void setCureentPage(int position) {
+        if (model == null) return ;
+        this.position=position;
+    }
 }

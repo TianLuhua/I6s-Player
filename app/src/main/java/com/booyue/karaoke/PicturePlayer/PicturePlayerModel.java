@@ -54,7 +54,7 @@ public class PicturePlayerModel implements BaseModel {
             String childPath = rootPath + "/" + s;
             imagePaths.add(childPath);
             //系统支持：jpg、png
-            if (childPath.endsWith(".jpg") || childPath.endsWith(".png")) {
+            if (childPath.endsWith(".jpg") || childPath.endsWith(".png") || childPath.endsWith(".bmp")) {
                 View itemView = LayoutInflater.from(mContext).inflate(R.layout.item_pictureactivity_viewpager, null);
                 final PhotoView photoView = itemView.findViewById(R.id.item_image);
                 Glide.with(mContext).load(childPath).diskCacheStrategy(DiskCacheStrategy.ALL)
@@ -78,6 +78,10 @@ public class PicturePlayerModel implements BaseModel {
         return position;
     }
 
+    public List<String> getImagePaths() {
+        return imagePaths;
+    }
+
     @Override
     public void onDestroy() {
         if (imageInfoList != null)
@@ -87,7 +91,6 @@ public class PicturePlayerModel implements BaseModel {
     }
 
     public int getDataSizi() {
-
         return imageInfoList.size();
     }
 

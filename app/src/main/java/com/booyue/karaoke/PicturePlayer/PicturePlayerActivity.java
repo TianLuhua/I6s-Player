@@ -53,11 +53,12 @@ public class PicturePlayerActivity extends AbstractMVPActivity<PicturePlayerView
     }
 
     private void updateUI() {
-        if (controller == null && imageInfoList == null && imageInfoList.size() > 0)
+        if (controller == null && imageInfoList == null && imageInfoList.size() > 0) {
             return;
+        }
         //显示的时候需要+1
-        controller.setCurrentFilePage(imageInfoList.size(), position + 1);
-        controller.setCurrentFileName((String) currentPhotoView.getTag());
+        controller.setCurrentFilePage(imageInfoList.size(), viewPager.getCurrentItem() + 1);
+        controller.setCurrentFileName(getPresenter().getImagePaths(viewPager.getCurrentItem()));
     }
 
 
@@ -130,13 +131,14 @@ public class PicturePlayerActivity extends AbstractMVPActivity<PicturePlayerView
                 viewPager.setCurrentItem(position, false);
             }
         });
+        updateUI();
     }
 
     @Override
     public void setCureentPage(int page, int palyModle) {
         Log.e("PicturePlayerActivity", "setCureentPage---position：" + palyModle);
         viewPager.setCurrentItem(page, false);
-        controller.updatePausePlay(palyModle==PicturePlayController.PLAYMODLE_LOOP);
+        controller.updatePausePlay(palyModle == PicturePlayController.PLAYMODLE_LOOP);
     }
 
     @Override
@@ -149,6 +151,7 @@ public class PicturePlayerActivity extends AbstractMVPActivity<PicturePlayerView
         Log.e("PicturePlayerActivity", "onPageSelected---position：" + position);
         this.position = position;
         this.currentPhotoView = imageInfoList.get(position);
+        getPresenter().setCureentPage(position);
         updateUI();
     }
 
