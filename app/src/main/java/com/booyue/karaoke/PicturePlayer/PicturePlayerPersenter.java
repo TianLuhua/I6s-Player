@@ -11,29 +11,34 @@ import com.github.chrisbanes.photoview.PhotoView;
 
 import java.util.List;
 
+import static com.booyue.karaoke.PicturePlayer.PicturePlayController.PLAYMODLE_LOOP;
+import static com.booyue.karaoke.PicturePlayer.PicturePlayController.PLAYMODLE_SINGLE;
+
 /**
  * Created by Tianluhua on 2018\7\30 0030.
  */
 public class PicturePlayerPersenter extends AbstractPresenter<PicturePlayerView> {
 
-    private PicturePlayerModel model;
-
-    public int PLAYMODLE_SINGLE = 0x00001;
-    public int PLAYMODLE_LOOP = 0x00002;
-
-
+    public static final int LOOP_PLAY = 0x0006;
     private int CURRENT_PLAYMODLE = PLAYMODLE_SINGLE;
-
+    private int loopTime = 3000;
+    private PicturePlayerModel model;
     private boolean isLoopPlay = false;
-    public static final int LOOP_PLAY = 0x0003;
+    private int position;
 
     private Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case LOOP_PLAY:
-                    int position = model.getCureentPosition();
-                    loop();
+
+                    if (position > model.getDataSizi() - 1)
+                        position = 0;
+                    if (getView() == null)
+                        return;
+                    getView().setCureentPage(position++, CURRENT_PLAYMODLE);
+
+                    loopPlay();
                     break;
 
             }
@@ -50,6 +55,7 @@ public class PicturePlayerPersenter extends AbstractPresenter<PicturePlayerView>
                 view.setData(imageInfoList, position);
             }
         });
+        position = model.getCureentPosition();
     }
 
     public void getData(Uri uri) {
@@ -58,27 +64,37 @@ public class PicturePlayerPersenter extends AbstractPresenter<PicturePlayerView>
         model.getData(uri);
     }
 
+    public void setLoopTime(int loopTime) {
+        this.loopTime = loopTime;
+    }
 
     public void changPlayModle() {
-
         if (CURRENT_PLAYMODLE == PLAYMODLE_SINGLE) {
             CURRENT_PLAYMODLE = PLAYMODLE_LOOP;
             isLoopPlay = true;
-            loop();
+            loopPlay();
             return;
         }
-
         if (CURRENT_PLAYMODLE == PLAYMODLE_LOOP) {
             CURRENT_PLAYMODLE = PLAYMODLE_SINGLE;
             isLoopPlay = false;
+            singlePlay();
             return;
         }
     }
 
-    private void loop() {
+    private void loopPlay() {
+        mHandler.removeMessages(LOOP_PLAY);
         if (isLoopPlay) {
-            mHandler.removeMessages(LOOP_PLAY);
-            mHandler.sendMessageDelayed(mHandler.obtainMessage(LOOP_PLAY), 2000);
+            getView().setCureentPage(position, CURRENT_PLAYMODLE);
+            mHandler.sendMessageDelayed(mHandler.obtainMessage(LOOP_PLAY), loopTime);
         }
     }
+
+    private void singlePlay() {
+        if (!isLoopPlay) {
+            getView().setCureentPage(position, CURRENT_PLAYMODLE);
+        }
+    }
+
 }

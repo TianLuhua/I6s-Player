@@ -29,6 +29,9 @@ public class PicturePlayController extends FrameLayout implements View.OnClickLi
 
     private static final int FADE_OUT = 0x0001;
 
+    public static final int PLAYMODLE_SINGLE = 0x00002;
+    public static final int PLAYMODLE_LOOP = 0x00003;
+
     private static final int DEFAULTTIMEOUT = 3000;
 
     private View mAnchor;
@@ -236,7 +239,7 @@ public class PicturePlayController extends FrameLayout implements View.OnClickLi
         } else {
             Log.e("PicturePlayController----------222222222---------show");
         }
-        updatePausePlay();
+//        updatePausePlay();
         if (timeout != 0) {
             mHandler.removeMessages(FADE_OUT);
             mHandler.sendMessageDelayed(mHandler.obtainMessage(FADE_OUT), timeout);
@@ -276,14 +279,10 @@ public class PicturePlayController extends FrameLayout implements View.OnClickLi
     }
 
 
-    private void updatePausePlay() {
+    public void updatePausePlay(boolean isLoop) {
         if (mRoot == null || play == null)
             return;
-//        if (play.isPlaying())
-//            ibPlay.setImageResource(R.mipmap.ic_puse);
-//        else
-//            ibPlay.setImageResource(R.mipmap.ic_play);
-//        initPlayModeIcon(false);
+        play.setImageResource(isLoop ? R.mipmap.ic_puse : R.mipmap.ic_play);
     }
 
     public boolean isShowing() {

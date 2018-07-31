@@ -86,6 +86,11 @@ public class PicturePlayerModel implements BaseModel {
             callback = null;
     }
 
+    public int getDataSizi() {
+
+        return imageInfoList.size();
+    }
+
     interface CallBack {
         void setData(List<PhotoView> imageInfoList, int position);
     }

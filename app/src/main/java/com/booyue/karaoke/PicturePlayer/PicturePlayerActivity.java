@@ -1,9 +1,7 @@
 package com.booyue.karaoke.PicturePlayer;
 
-import android.graphics.Bitmap;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
 
@@ -58,7 +56,7 @@ public class PicturePlayerActivity extends AbstractMVPActivity<PicturePlayerView
         if (controller == null && imageInfoList == null && imageInfoList.size() > 0)
             return;
         //显示的时候需要+1
-        controller.setCurrentFilePage(imageInfoList.size(), position+1);
+        controller.setCurrentFilePage(imageInfoList.size(), position + 1);
         controller.setCurrentFileName((String) currentPhotoView.getTag());
     }
 
@@ -78,7 +76,7 @@ public class PicturePlayerActivity extends AbstractMVPActivity<PicturePlayerView
 
     @Override
     public void onPrev() {
-        if (position < 0){
+        if (position < 0) {
             return;
         }
         position--;
@@ -88,7 +86,7 @@ public class PicturePlayerActivity extends AbstractMVPActivity<PicturePlayerView
     @Override
     public void onNext() {
         Log.e("PicturePlayerActivity", "onNext--1111-position:" + position);
-        if (position > imageInfoList.size() - 1){
+        if (position > imageInfoList.size() - 1) {
             Log.e("PicturePlayerActivity", "onNext--2222-position:" + position);
             return;
         }
@@ -135,6 +133,13 @@ public class PicturePlayerActivity extends AbstractMVPActivity<PicturePlayerView
     }
 
     @Override
+    public void setCureentPage(int page, int palyModle) {
+        Log.e("PicturePlayerActivity", "setCureentPage---position：" + palyModle);
+        viewPager.setCurrentItem(page, false);
+        controller.updatePausePlay(palyModle==PicturePlayController.PLAYMODLE_LOOP);
+    }
+
+    @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
     }
@@ -142,7 +147,7 @@ public class PicturePlayerActivity extends AbstractMVPActivity<PicturePlayerView
     @Override
     public void onPageSelected(int position) {
         Log.e("PicturePlayerActivity", "onPageSelected---position：" + position);
-        this.position = position ;
+        this.position = position;
         this.currentPhotoView = imageInfoList.get(position);
         updateUI();
     }

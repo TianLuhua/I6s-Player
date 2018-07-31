@@ -12,4 +12,5 @@ public interface PicturePlayerView extends BaseView {
 
     void setData(List<PhotoView> imageInfoList, int position);
 
+    void setCureentPage(int page, int palyModle);
 }
