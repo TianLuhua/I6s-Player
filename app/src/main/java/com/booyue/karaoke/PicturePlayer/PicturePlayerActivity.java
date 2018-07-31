@@ -57,7 +57,8 @@ public class PicturePlayerActivity extends AbstractMVPActivity<PicturePlayerView
     private void updateUI() {
         if (controller == null && imageInfoList == null && imageInfoList.size() > 0)
             return;
-        controller.setCurrentFilePage(imageInfoList.size(), position);
+        //显示的时候需要+1
+        controller.setCurrentFilePage(imageInfoList.size(), position+1);
         controller.setCurrentFileName((String) currentPhotoView.getTag());
     }
 
@@ -70,29 +71,29 @@ public class PicturePlayerActivity extends AbstractMVPActivity<PicturePlayerView
     @Override
     public void onBack() {
         Log.e("PicturePlayerActivity", "onBack");
-        controller.hide();
+        if (controller.isShowing())
+            controller.hide();
         this.finish();
     }
 
     @Override
     public void onPrev() {
-        int i = position--;
-        this.position = i;
-        if (i < 0)
+        if (position < 0){
             return;
-        this.position = i;
-        Log.e("PicturePlayerActivity", "onPrev---position:" + position);
+        }
+        position--;
         viewPager.setCurrentItem(position);
     }
 
     @Override
     public void onNext() {
-        Log.e("PicturePlayerActivity", "onNext");
-        int i = position++;
-        if (i > imageInfoList.size())
+        Log.e("PicturePlayerActivity", "onNext--1111-position:" + position);
+        if (position > imageInfoList.size() - 1){
+            Log.e("PicturePlayerActivity", "onNext--2222-position:" + position);
             return;
-        this.position = i;
-        Log.e("PicturePlayerActivity", "onNext---position:" + position);
+        }
+        position++;
+        Log.e("PicturePlayerActivity", "onNext--3333-position:" + position);
         viewPager.setCurrentItem(position);
     }
 
@@ -114,8 +115,9 @@ public class PicturePlayerActivity extends AbstractMVPActivity<PicturePlayerView
 
     @Override
     public void setData(final List<PhotoView> imageInfoList, final int position) {
+        Log.e("PicturePlayerActivity", "setData---position:" + position);
         this.imageInfoList = imageInfoList;
-        this.position = position;
+        this.position = position + 1;
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -128,7 +130,6 @@ public class PicturePlayerActivity extends AbstractMVPActivity<PicturePlayerView
                 });
                 viewPager.setAdapter(adapter);
                 viewPager.setCurrentItem(position, false);
-                Log.e("PicturePlayerActivity", "setData--position:" + position);
             }
         });
     }
@@ -141,7 +142,7 @@ public class PicturePlayerActivity extends AbstractMVPActivity<PicturePlayerView
     @Override
     public void onPageSelected(int position) {
         Log.e("PicturePlayerActivity", "onPageSelected---position：" + position);
-        this.position = position + 1;
+        this.position = position ;
         this.currentPhotoView = imageInfoList.get(position);
         updateUI();
     }
