@@ -5,9 +5,8 @@
     android:layout_height="match_parent"
     tools:context="com.booyue.karaoke.PicturePlayer.PicturePlayerActivity">
 
-    <com.github.chrisbanes.photoview.PhotoView
-        android:id="@+id/image"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpage"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
 </RelativeLayout>

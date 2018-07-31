@@ -1,13 +1,13 @@
 package com.booyue.karaoke.PicturePlayer;
 
-import android.graphics.Bitmap;
+import android.content.Context;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
-import android.telephony.IccOpenLogicalChannelResponse;
 import android.util.Log;
 
 import com.booyue.karaoke.base.AbstractPresenter;
+import com.github.chrisbanes.photoview.PhotoView;
 
 import java.util.List;
 
@@ -33,7 +33,6 @@ public class PicturePlayerPersenter extends AbstractPresenter<PicturePlayerView>
             switch (msg.what) {
                 case LOOP_PLAY:
                     int position = model.getCureentPosition();
-                    getData(position++);
                     loop();
                     break;
 
@@ -41,22 +40,14 @@ public class PicturePlayerPersenter extends AbstractPresenter<PicturePlayerView>
         }
     };
 
-    public PicturePlayerPersenter() {
-        model = new PicturePlayerModel(new PicturePlayerModel.CallBack() {
+    public PicturePlayerPersenter(Context mContext) {
+        model = new PicturePlayerModel(mContext, new PicturePlayerModel.CallBack() {
             @Override
-            public void setData(List<String> imageInfoList, int position) {
+            public void setData(List<PhotoView> imageInfoList, int position) {
                 PicturePlayerView view = getView();
                 if (view == null)
                     return;
                 view.setData(imageInfoList, position);
-            }
-
-            @Override
-            public void setData(Bitmap bitmap, String name, int total, int position) {
-                PicturePlayerView view = getView();
-                if (view == null)
-                    return;
-                view.setData(bitmap, name, total, position);
             }
         });
     }
@@ -67,13 +58,6 @@ public class PicturePlayerPersenter extends AbstractPresenter<PicturePlayerView>
         model.getData(uri);
     }
 
-    public void getData(int i) {
-        if (model == null)
-            return;
-        Log.e("PicturePlayerPersenter", "position:"+i);
-        model.getData(i);
-
-    }
 
     public void changPlayModle() {
 
@@ -97,6 +81,4 @@ public class PicturePlayerPersenter extends AbstractPresenter<PicturePlayerView>
             mHandler.sendMessageDelayed(mHandler.obtainMessage(LOOP_PLAY), 2000);
         }
     }
-
-
 }

@@ -1,8 +1,7 @@
 package com.booyue.karaoke.PicturePlayer;
 
-import android.graphics.Bitmap;
-
 import com.booyue.karaoke.base.BaseView;
+import com.github.chrisbanes.photoview.PhotoView;
 
 import java.util.List;
 
@@ -11,7 +10,6 @@ import java.util.List;
  */
 public interface PicturePlayerView extends BaseView {
 
-    void setData(List<String> imageInfoList,int position);
+    void setData(List<PhotoView> imageInfoList, int position);
 
-    void setData(Bitmap bitmap, String name, int total, int position);
 }

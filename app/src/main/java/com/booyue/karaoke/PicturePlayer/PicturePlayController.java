@@ -41,7 +41,6 @@ public class PicturePlayController extends FrameLayout implements View.OnClickLi
     private int mAnimStyle;
 
 
-
     private FrameLayout flPictrue;
     private ImageView back;
     private ImageView play;
@@ -228,8 +227,8 @@ public class PicturePlayController extends FrameLayout implements View.OnClickLi
                 Rect anchorRect = new Rect(location[0], location[1], location[0] + mAnchor.getWidth(), location[1] + mAnchor.getHeight());
                 mWindow.setAnimationStyle(mAnimStyle);
                 setWindowLayoutType();
-                mWindow.showAtLocation(mAnchor, Gravity.NO_GRAVITY, anchorRect.left, anchorRect.bottom);
-                Log.e("PicturePlayController---show------------");
+                if (!mWindow.isShowing())
+                    mWindow.showAtLocation(mAnchor, Gravity.NO_GRAVITY, anchorRect.left, anchorRect.bottom);
             }
             mShowing = true;
             if (mShownListener != null)
