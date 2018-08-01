@@ -114,7 +114,7 @@ public class AudioPlayActivity extends AbstractMVPActivity<AudioPlayerView, Audi
     }
 
     private void notficationDataChange(final int position) {
-        adapter.notifyItemChanged(position);
+        adapter.setCureentPlayingItem(position);
         audioList.scrollToPosition(position);
     }
 
@@ -168,6 +168,7 @@ public class AudioPlayActivity extends AbstractMVPActivity<AudioPlayerView, Audi
 
     @Override
     public void onCompletion(MediaPlayer mp) {
+
 
     }
 

@@ -22,6 +22,7 @@ public class AudioListAdapter extends RecyclerView.Adapter<AudioListAdapter.Audi
 
     private Context mContext;
     private List<AudioBean> audioBeans = new ArrayList<>();
+    private int cureentPlayingItem=-1;
 
 
     public AudioListAdapter(Context mContext) {
@@ -50,7 +51,7 @@ public class AudioListAdapter extends RecyclerView.Adapter<AudioListAdapter.Audi
                 onItemClickListener.onItemClick(audioBean, position);
             }
         });
-        holder.icon.setVisibility(audioBean.isPlaying() ? View.VISIBLE : View.INVISIBLE);
+        holder.icon.setVisibility(cureentPlayingItem==position ? View.VISIBLE : View.INVISIBLE);
         holder.name.setText(audioBean.getName());
     }
 
@@ -74,6 +75,11 @@ public class AudioListAdapter extends RecyclerView.Adapter<AudioListAdapter.Audi
         }
     }
 
+
+    public void setCureentPlayingItem(int position) {
+        this.cureentPlayingItem=position;
+        notifyDataSetChanged();
+    }
 
     private OnItemClickListener onItemClickListener;
 

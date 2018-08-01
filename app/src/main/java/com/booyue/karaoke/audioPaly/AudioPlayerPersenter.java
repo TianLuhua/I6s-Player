@@ -19,7 +19,6 @@ public class AudioPlayerPersenter extends AbstractPresenter<AudioPlayerView> {
 
     private int position;
     private List<AudioBean> imageInfoList;
-    private AudioBean cureentPlayAudio;
 
 
     public AudioPlayerPersenter(Context mContext) {
@@ -59,13 +58,11 @@ public class AudioPlayerPersenter extends AbstractPresenter<AudioPlayerView> {
      * 上一曲
      */
     public void onPrev() {
-
         position--;
         if (position < 0) {
             position = imageInfoList.size() - 1;
         }
-
-
+        getView().startPlay(imageInfoList.get(position).getPath(), position);
     }
 
     /**
@@ -76,15 +73,7 @@ public class AudioPlayerPersenter extends AbstractPresenter<AudioPlayerView> {
         if (position >= imageInfoList.size()) {
             position = 0;
         }
-        cureentPlayAudio = imageInfoList.get(position);
-        cureentPlayAudio.setPlaying(true);
-        getView().startPlay(cureentPlayAudio.getPath(), position);
-        resetDataStatus();
+        getView().startPlay(imageInfoList.get(position).getPath(), position);
     }
-
-    private void resetDataStatus() {
-        cureentPlayAudio.setPlaying(false);
-    }
-
 
 }
