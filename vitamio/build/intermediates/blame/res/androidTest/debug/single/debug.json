@@ -1,0 +1,434 @@
+[
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_scrubber_track_holo_dark.9.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xhdpi-v4\\scrubber_track_holo_dark.9.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_actionbar_bg.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\actionbar_bg.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_loop.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\loop.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_mediacontorller_volume.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-mdpi-v4\\mediacontorller_volume.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_accompany.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\accompany.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_scrubber_primary_holo.9.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xhdpi-v4\\scrubber_primary_holo.9.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_mediacontroller_pause.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xhdpi-v4\\mediacontroller_pause.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_mediacontorller_play.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-mdpi-v4\\mediacontorller_play.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_btn_spbf_next_song.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\btn_spbf_next_song.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_seekbar_mediacontorller_thumb.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-mdpi-v4\\seekbar_mediacontorller_thumb.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_scrubber_control_focused_holo.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xhdpi-v4\\scrubber_control_focused_holo.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_point.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\point.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_karaoke_local.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\karaoke_local.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_bottom_spbf_next_videoplay.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\bottom_spbf_next_videoplay.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_loop_once.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\loop_once.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_btn_spbf_share.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\btn_spbf_share.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_scrubber_control_disabled_holo.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xhdpi-v4\\scrubber_control_disabled_holo.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_scrubber_control_pressed_holo.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xhdpi-v4\\scrubber_control_pressed_holo.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_spbf_progress_bar_dot.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\spbf_progress_bar_dot.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_accompany_text.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-mdpi-v4\\accompany_text.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_selector_play.xml.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\selector_play.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_mediacontroller_karaoke.xml.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\layout\\mediacontroller_karaoke.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_btn_spbf_back.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\btn_spbf_back.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_btn_spbf_music_play.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\btn_spbf_music_play.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_scrubber_control_selector_holo.xml.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\scrubber_control_selector_holo.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_btn_spbf_single_cycle.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\btn_spbf_single_cycle.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_spbf_progress_bar_bg.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\spbf_progress_bar_bg.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_yyjdt_bg_9.9.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\yyjdt_bg_9.9.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_selector_pause.xml.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\selector_pause.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_bg_mediacontroller.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-mdpi-v4\\bg_mediacontroller.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_mediacontorller_cycle.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-mdpi-v4\\mediacontorller_cycle.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_back_press.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\back_press.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_volum_adjust.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\volum_adjust.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_progressbar_drawable.xml.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\progressbar_drawable.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_nav_spbf_bg.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\nav_spbf_bg.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_mtv_hht.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\mtv_hht.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_mediacontorller_pre.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-mdpi-v4\\mediacontorller_pre.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_tab_spbf_bg_videoplay.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\tab_spbf_bg_videoplay.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_btn_spbf_last_song.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\btn_spbf_last_song.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_selector_next.xml.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\selector_next.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_btn_spbf_heart_nor.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\btn_spbf_heart_nor.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_bottom_spbf_stop_videoplay.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\bottom_spbf_stop_videoplay.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_yyjdt_bg_play.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\yyjdt_bg_play.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_bottom_spbf_download_video_play.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\bottom_spbf_download_video_play.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_mediacontroller_button.xml.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\mediacontroller_button.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_btn_spbf_music_stop.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\btn_spbf_music_stop.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_scrubber_control_normal_holo.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xhdpi-v4\\scrubber_control_normal_holo.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_mediacontorller_single.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-mdpi-v4\\mediacontorller_single.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_seekbar_thumb_pressed.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\seekbar_thumb_pressed.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_shape_volume_progress.xml.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\shape_volume_progress.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_btn_spbf_download_nor.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\btn_spbf_download_nor.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_shape_volume_control_bg.xml.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\shape_volume_control_bg.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_pre_press.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\pre_press.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_bottom_spbf_lastvideoplay.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\bottom_spbf_lastvideoplay.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_icon_bfjdt_pointvideoplay.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\icon_bfjdt_pointvideoplay.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_bottom_spbf_full_screen_videoplay.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\bottom_spbf_full_screen_videoplay.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_nav_back_play.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\nav_back_play.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_selector_loop.xml.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\selector_loop.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_shakelight.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-mdpi-v4\\shakelight.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_ic_launcher.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-hdpi-v4\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_bottom_spbf_play_videoplay.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\bottom_spbf_play_videoplay.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_next_press.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\next_press.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_layout_volume_control.xml.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\layout\\layout_volume_control.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_jindu1.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\jindu1.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_pre.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\pre.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_btn_spbf_list_loop.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\btn_spbf_list_loop.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_btn_spbf_timing.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\btn_spbf_timing.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_selector_back.xml.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\selector_back.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_shakelight.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\shakelight.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_btn_spbf_loop_play.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\btn_spbf_loop_play.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_bottom_spbf_share_videoplay.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\bottom_spbf_share_videoplay.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_mediacontroller_play.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xhdpi-v4\\mediacontroller_play.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_btn_already_scan_choice_hov.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\btn_already_scan_choice_hov.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_po_seekbar.xml.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\po_seekbar.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_shape_volume_thumb.xml.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\shape_volume_thumb.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_nav.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\nav.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_icon1.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\icon1.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_bfjdt_bg_9.9.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\bfjdt_bg_9.9.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_mediacontroller.xml.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\layout\\mediacontroller.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_mediacontorller_next.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-mdpi-v4\\mediacontorller_next.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_bofang.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\bofang.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_background.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\background.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_selector_pre.xml.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\selector_pre.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-ldpi-v4_ic_launcher.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-ldpi-v4\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_bg_video_play.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\bg_video_play.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_volume_mute.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\volume_mute.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_icon_144x144.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\icon_144x144.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_play.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\play.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_btn_spbf_heart_hov.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\btn_spbf_heart_hov.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_icon2.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\icon2.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_volume_seekbar.xml.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\volume_seekbar.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_back.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\back.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_next.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\next.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_scrubber_progress_horizontal_holo_dark.xml.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\scrubber_progress_horizontal_holo_dark.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_loop_press.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\loop_press.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_mediacontorller_pause.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-mdpi-v4\\mediacontorller_pause.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_volume_control.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\volume_control.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_btn_spbf_download_hov.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\btn_spbf_download_hov.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_accompany.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-mdpi-v4\\accompany.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_jindu2.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\jindu2.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_play_press.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\play_press.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_ic_launcher.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-mdpi-v4\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_lan.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\lan.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_selector_loop1.xml.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\selector_loop1.xml"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_accompany_text.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\accompany_text.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_ic_launcher.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xhdpi-v4\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_scrubber_secondary_holo.9.png.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable-xhdpi-v4\\scrubber_secondary_holo.9.png"
+    },
+    {
+        "merged": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_seekbar_mediacontorller.xml.flat",
+        "source": "E:\\WorkSpace\\AS_WorkSpace\\I6s-Player\\vitamio\\build\\intermediates\\packaged_res\\debug\\drawable\\seekbar_mediacontorller.xml"
+    }
+]

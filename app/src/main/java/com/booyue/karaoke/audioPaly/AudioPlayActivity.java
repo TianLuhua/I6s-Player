@@ -130,8 +130,8 @@ public class AudioPlayActivity extends AbstractMVPActivity<AudioPlayerView, Audi
                 return;
             if (mMediaPlayer.isPlaying()) {
                 mMediaPlayer.stop();
-                mMediaPlayer.reset();
             }
+            mMediaPlayer.reset();
             mMediaPlayer.setDataSource(uri);
             mMediaPlayer.prepare();
         } catch (IOException e) {
