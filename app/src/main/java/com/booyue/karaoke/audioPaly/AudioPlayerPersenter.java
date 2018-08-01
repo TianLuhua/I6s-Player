@@ -9,7 +9,6 @@ import com.booyue.karaoke.base.AbstractPresenter;
 import java.util.List;
 
 
-
 /**
  * Created by Tianluhua on 2018\7\30 0030.
  */
@@ -20,6 +19,7 @@ public class AudioPlayerPersenter extends AbstractPresenter<AudioPlayerView> {
 
     private int position;
     private List<AudioBean> imageInfoList;
+    private AudioBean cureentPlayAudio;
 
 
     public AudioPlayerPersenter(Context mContext) {
@@ -55,14 +55,16 @@ public class AudioPlayerPersenter extends AbstractPresenter<AudioPlayerView> {
             model.onDestroy();
     }
 
-    public void startPlay() {
-
-    }
-
     /**
      * 上一曲
      */
     public void onPrev() {
+
+        position--;
+        if (position < 0) {
+            position = imageInfoList.size() - 1;
+        }
+
 
     }
 
@@ -70,9 +72,19 @@ public class AudioPlayerPersenter extends AbstractPresenter<AudioPlayerView> {
      * 下一曲
      */
     public void onNext() {
-        position--;
-        if (position < 0) {
-            position = imageInfoList.size() - 1;
+        position++;
+        if (position >= imageInfoList.size()) {
+            position = 0;
         }
+        cureentPlayAudio = imageInfoList.get(position);
+        cureentPlayAudio.setPlaying(true);
+        getView().startPlay(cureentPlayAudio.getPath(), position);
+        resetDataStatus();
     }
+
+    private void resetDataStatus() {
+        cureentPlayAudio.setPlaying(false);
+    }
+
+
 }

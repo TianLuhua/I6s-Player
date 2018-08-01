@@ -73,7 +73,7 @@
         </activity>
 
         <activity
-            android:name=".audioPaly.AudioPalyActivity"
+            android:name=".audioPaly.AudioPlayActivity"
             android:configChanges="orientation|screenSize|screenLayout|touchscreen|keyboardHidden|keyboard|layoutDirection"
             android:launchMode="singleTask"
             android:screenOrientation="landscape">

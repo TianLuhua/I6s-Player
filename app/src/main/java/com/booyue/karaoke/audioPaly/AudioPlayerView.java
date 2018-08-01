@@ -12,5 +12,5 @@ public interface AudioPlayerView extends BaseView {
 
     void setData(List<AudioBean> audioInfoList, int position);
 
-    void setCureentPage(int page, int palyModle);
+    void startPlay(String uri, int position);
 }

@@ -20,14 +20,15 @@ import java.util.List;
 /**
  * Created by Tianluhua on 2018\8\1 0001.
  */
-public class AudioPalyActivity extends AbstractMVPActivity<AudioPlayerView, AudioPlayerPersenter> implements
+public class AudioPlayActivity extends AbstractMVPActivity<AudioPlayerView, AudioPlayerPersenter> implements
         AudioPlayerView,
         View.OnClickListener,
         AudioController.AudioPlayerUIListener,
         MediaPlayer.OnErrorListener,
         MediaPlayer.OnPreparedListener,
         MediaPlayer.OnInfoListener,
-        MediaPlayer.OnCompletionListener {
+        MediaPlayer.OnCompletionListener,
+        AudioListAdapter.OnItemClickListener {
 
     //播放部分
     private AudioController controller;
@@ -72,6 +73,7 @@ public class AudioPalyActivity extends AbstractMVPActivity<AudioPlayerView, Audi
         audioList = findViewById(R.id.layout_list);
         audioList.setLayoutManager(new LinearLayoutManager(this));
         adapter = new AudioListAdapter(getApplicationContext());
+        adapter.setOnItemClickListener(this);
         audioList.setAdapter(adapter);
 
         //请求数据
@@ -93,6 +95,12 @@ public class AudioPalyActivity extends AbstractMVPActivity<AudioPlayerView, Audi
         startPlayAudio(audioBean.getPath());
     }
 
+    @Override
+    public void startPlay(String uri, int position) {
+        startPlayAudio(uri);
+        notficationDataChange(position);
+    }
+
     /**
      * 通知adapter 数据状态发生了变化
      *
@@ -102,8 +110,14 @@ public class AudioPalyActivity extends AbstractMVPActivity<AudioPlayerView, Audi
     private void notficationDataChange(final List<AudioBean> audioInfoList, final int position) {
         adapter.setAudioBeans(audioInfoList, position);
         //滚动到指定的位置
+        notficationDataChange(position);
+    }
+
+    private void notficationDataChange(final int position) {
+        adapter.notifyItemChanged(position);
         audioList.scrollToPosition(position);
     }
+
 
     /**
      * 开始播放
@@ -112,18 +126,18 @@ public class AudioPalyActivity extends AbstractMVPActivity<AudioPlayerView, Audi
      */
     private void startPlayAudio(String uri) {
         try {
+            if (mMediaPlayer == null)
+                return;
+            if (mMediaPlayer.isPlaying()) {
+                mMediaPlayer.stop();
+                mMediaPlayer.reset();
+            }
             mMediaPlayer.setDataSource(uri);
             mMediaPlayer.prepare();
         } catch (IOException e) {
             e.printStackTrace();
-            Log.e("AudioPalyActivity", e.getMessage());
+            Log.e("AudioPlayActivity", e.getMessage());
         }
-    }
-
-
-    @Override
-    public void setCureentPage(int page, int palyModle) {
-
     }
 
 
@@ -175,15 +189,21 @@ public class AudioPalyActivity extends AbstractMVPActivity<AudioPlayerView, Audi
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (controller.isShowing()){
+        if (controller.isShowing()) {
             controller.hide();
         }
-
         if (mMediaPlayer != null) {
             if (mMediaPlayer.isPlaying()) {
                 mMediaPlayer.stop();
                 mMediaPlayer.release();
             }
         }
+    }
+
+    @Override
+    public void onItemClick(AudioBean audioBean, int position) {
+        startPlayAudio(audioBean.getPath());
+        audioBean.setPlaying(true);
+        notficationDataChange(position);
     }
 }

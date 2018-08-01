@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.booyue.karaoke.R;
@@ -39,8 +40,16 @@ public class AudioListAdapter extends RecyclerView.Adapter<AudioListAdapter.Audi
     }
 
     @Override
-    public void onBindViewHolder(AudioHolder holder, int position) {
-        AudioBean audioBean = audioBeans.get(position);
+    public void onBindViewHolder(AudioHolder holder, final int position) {
+        final AudioBean audioBean = audioBeans.get(position);
+        holder.item.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (onItemClickListener == null)
+                    return;
+                onItemClickListener.onItemClick(audioBean, position);
+            }
+        });
         holder.icon.setVisibility(audioBean.isPlaying() ? View.VISIBLE : View.INVISIBLE);
         holder.name.setText(audioBean.getName());
     }
@@ -50,16 +59,37 @@ public class AudioListAdapter extends RecyclerView.Adapter<AudioListAdapter.Audi
         return audioBeans == null ? 0 : audioBeans.size();
     }
 
+
     class AudioHolder extends RecyclerView.ViewHolder {
 
+        private RelativeLayout item;
         private ImageView icon;
         private TextView name;
 
         public AudioHolder(View itemView) {
             super(itemView);
+            item = itemView.findViewById(R.id.item_content);
             icon = itemView.findViewById(R.id.item_icon);
             name = itemView.findViewById(R.id.item_name);
         }
+    }
+
+
+    private OnItemClickListener onItemClickListener;
+
+    /**
+     * 设置item的点击监听器
+     *
+     * @param onItemClickListener
+     */
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
+
+    public interface OnItemClickListener {
+
+        void onItemClick(AudioBean audioBean, int position);
+
     }
 
 
