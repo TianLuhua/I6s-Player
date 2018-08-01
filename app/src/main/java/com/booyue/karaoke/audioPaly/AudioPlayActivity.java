@@ -168,7 +168,7 @@ public class AudioPlayActivity extends AbstractMVPActivity<AudioPlayerView, Audi
 
     @Override
     public void onCompletion(MediaPlayer mp) {
-
+        getPresenter().startPlayAccordingToPlayMode();
 
     }
 
@@ -206,5 +206,7 @@ public class AudioPlayActivity extends AbstractMVPActivity<AudioPlayerView, Audi
         startPlayAudio(audioBean.getPath());
         audioBean.setPlaying(true);
         notficationDataChange(position);
+        //让用户操作和业务逻辑同步
+        getPresenter().setCureentPage(position);
     }
 }

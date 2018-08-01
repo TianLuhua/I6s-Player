@@ -47,12 +47,6 @@ public class AudioPlayerPersenter extends AbstractPresenter<AudioPlayerView> {
         this.position = position;
     }
 
-    @Override
-    public void detachView() {
-        super.detachView();
-        if (model != null)
-            model.onDestroy();
-    }
 
     /**
      * 上一曲
@@ -76,4 +70,20 @@ public class AudioPlayerPersenter extends AbstractPresenter<AudioPlayerView> {
         getView().startPlay(imageInfoList.get(position).getPath(), position);
     }
 
+    /**
+     * 根据用户设置来单个循环还是循环list列表播放
+     */
+    public void startPlayAccordingToPlayMode() {
+        if (AudioController.STATE_PLAY_MODE == AudioController.STATE_PLAY_MODE_SINGLE)
+            getView().startPlay(imageInfoList.get(position).getPath(), position);
+        else
+            onNext();
+    }
+
+    @Override
+    public void detachView() {
+        super.detachView();
+        if (model != null)
+            model.onDestroy();
+    }
 }
