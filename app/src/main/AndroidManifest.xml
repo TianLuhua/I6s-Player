@@ -18,12 +18,14 @@
         <activity
             android:name="com.booyue.karaoke.activity.FlashActivity"
             android:configChanges="orientation|screenSize|screenLayout|touchscreen|keyboardHidden|keyboard|layoutDirection"
-            android:screenOrientation="landscape"></activity>
+            android:screenOrientation="landscape" />
+
         <activity
             android:name=".activity.MainActivity"
             android:configChanges="orientation|screenSize|screenLayout|touchscreen|keyboardHidden|keyboard|layoutDirection"
             android:launchMode="singleTask"
-            android:screenOrientation="landscape"></activity>
+            android:screenOrientation="landscape" />
+
         <activity
             android:name=".activity.KoraokeActivity"
             android:configChanges="orientation|screenSize|screenLayout|touchscreen|keyboardHidden|keyboard|layoutDirection"
@@ -36,11 +38,6 @@
             </intent-filter>
         </activity>
 
-
-        <!-- <activity -->
-        <!-- android:name=".activity.VideoActivity" -->
-        <!-- android:launchMode="singleTask" -->
-        <!-- android:screenOrientation="landscape" /> -->
         <activity
             android:name=".activity.VideoPlayActivity"
             android:configChanges="orientation|screenSize|screenLayout|touchscreen|keyboardHidden|keyboard|layoutDirection"
@@ -51,37 +48,19 @@
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
-
                 <data android:mimeType="video/*" />
-                <!--<data-->
-                <!--android:mimeType="video/*"-->
-                <!--android:pathPattern=".*\\.*"-->
-                <!--android:scheme="file" />-->
             </intent-filter>
         </activity>
+
         <activity
             android:name=".mediaplayer.VideoPlayerActivity"
             android:configChanges="orientation|screenSize|screenLayout|touchscreen|keyboardHidden|keyboard|layoutDirection"
             android:exported="true"
             android:launchMode="singleTask"
-            android:screenOrientation="landscape">
-            <!--<intent-filter>-->
-            <!--<action android:name="android.intent.action.MAIN" />-->
-            <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-            <!--<intent-filter>-->
-            <!--<action android:name="android.intent.action.VIEW" />-->
-            <!--<category android:name="android.intent.category.DEFAULT" />-->
-            <!--<data-->
-            <!--android:mimeType="video/*"-->
-            <!--android:pathPattern=".*\\.*"-->
-            <!--android:scheme="file" />-->
-            <!--</intent-filter>-->
+            android:screenOrientation="landscape" />
 
-
-        </activity>
         <activity
-            android:name=".PicturePlayer.PicturePlayerActivity"
+            android:name=".pictureplayer.PicturePlayerActivity"
             android:configChanges="orientation|screenSize|screenLayout|touchscreen|keyboardHidden|keyboard|layoutDirection"
             android:launchMode="singleTask"
             android:screenOrientation="landscape">
@@ -90,19 +69,20 @@
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data android:mimeType="image/*" />
-                <!--<data-->
-                <!--android:mimeType="video/*"-->
-                <!--android:pathPattern=".*\\.*"-->
-                <!--android:scheme="file" />-->
             </intent-filter>
         </activity>
 
-
-        <!--<activity-->
-        <!--android:name=".activity.karaoke_test"-->
-        <!--android:launchMode="singleTask"-->
-        <!--android:screenOrientation="landscape" >-->
-        <!--</activity>-->
+        <activity
+            android:name=".audioPaly.AudioPalyActivity"
+            android:configChanges="orientation|screenSize|screenLayout|touchscreen|keyboardHidden|keyboard|layoutDirection"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="audio/*" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

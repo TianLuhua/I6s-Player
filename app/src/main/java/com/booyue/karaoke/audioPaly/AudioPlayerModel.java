@@ -1,0 +1,87 @@
+package com.booyue.karaoke.audioPaly;
+
+import android.content.Context;
+import android.net.Uri;
+
+import com.booyue.karaoke.audioPaly.bean.AudioBean;
+import com.booyue.karaoke.base.BaseModel;
+import com.github.chrisbanes.photoview.PhotoView;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+
+/**
+ * Created by Tianluhua on 2018\7\30 0030.
+ */
+public class AudioPlayerModel implements BaseModel {
+
+    private CallBack callback;
+    private List<AudioBean> audioInfoList = new ArrayList<>();
+    private List<String> audioPaths = new ArrayList<>();
+    private int position;
+    private Context mContext;
+
+
+    public AudioPlayerModel(Context mContext, CallBack callBack) {
+        this.callback = callBack;
+        this.mContext = mContext;
+    }
+
+    public void getData(final Uri uri) {
+        String path = uri.getPath();
+        int startIndex = path.lastIndexOf("/");
+        File rootFile = new File(path.substring(0, startIndex));
+        String chooseFilePath = path.substring(startIndex + 1, path.length());
+        String rootPath = rootFile.getPath();
+        audioInfoList.clear();
+        audioPaths.clear();
+        for (String s : rootFile.list()) {
+            String childPath = rootPath + "/" + s;
+            //系统支持：jpg、png
+            if (childPath.endsWith(".mp3")) {
+                audioPaths.add(s);
+                AudioBean audio = new AudioBean();
+                audio.setName(s);
+                audio.setPath(childPath);
+                audio.setPlaying(false);
+                audioInfoList.add(audio);
+            }
+        }
+        position = audioPaths.indexOf(chooseFilePath);
+        if (callback == null)
+            return;
+        callback.setData(audioInfoList, position);
+    }
+
+    public int getCureentPosition() {
+        return position;
+    }
+
+    public List<String> getImagePaths() {
+        return audioPaths;
+    }
+
+    @Override
+    public void onDestroy() {
+        if (audioInfoList != null)
+            audioInfoList = null;
+        if (callback != null)
+            callback = null;
+        if (audioPaths != null)
+            audioPaths = null;
+        if (mContext != null)
+            mContext = null;
+    }
+
+    public int getDataSizi() {
+        return audioInfoList.size();
+    }
+
+    interface CallBack {
+        void setData(List<AudioBean> audioInfoLists, int position);
+    }
+
+
+}

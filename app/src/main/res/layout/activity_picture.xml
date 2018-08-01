@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.booyue.karaoke.PicturePlayer.PicturePlayerActivity">
+    tools:context="com.booyue.karaoke.pictureplayer.PicturePlayerActivity">
 
     <com.booyue.karaoke.customview.PicturePlayViewPage
         android:id="@+id/viewpage"

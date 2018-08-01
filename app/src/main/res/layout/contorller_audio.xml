@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_layout"
+    android:layout_width="564dp"
+    android:layout_height="504dp">
+
+    <RelativeLayout
+        android:id="@+id/ll_menu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_140"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/ib_playmode_vitamio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dimen_46"
+            android:src="@drawable/selector_loop" />
+
+        <ImageView
+            android:id="@+id/ib_prev_vitamio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_40"
+            android:layout_toLeftOf="@+id/ib_play_vitamio"
+            android:src="@drawable/selector_pre" />
+
+        <ImageView
+            android:id="@+id/ib_play_vitamio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/selector_pause" />
+
+        <ImageView
+            android:id="@+id/ib_next_vitamio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ib_play_vitamio"
+            android:paddingLeft="@dimen/dimen_40"
+            android:src="@drawable/selector_next" />
+
+        <ImageView
+            android:id="@+id/ib_volume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/dimen_46"
+            android:src="@drawable/mediacontorller_volume" />
+    </RelativeLayout>
+
+
+    <SeekBar
+        android:id="@+id/sb_progress_vitamio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ll_menu"
+        android:layout_marginTop="-23.0dip"
+        android:max="100"
+        android:maxHeight="@dimen/dimen_5"
+        android:minHeight="@dimen/dimen_5"
+        android:paddingEnd="0.0dip"
+        android:paddingStart="0.0dip"
+        android:progressDrawable="@drawable/po_seekbar"
+        android:splitTrack="false"
+        android:thumb="@drawable/point"
+        android:thumbOffset="@dimen/dimen_10" />
+
+    <TextView
+        android:id="@+id/tv_durationtime_vitamio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/sb_progress_vitamio"
+        android:layout_marginRight="@dimen/dimen_5"
+        android:layout_marginTop="-17dp"
+        android:text="00:00"
+        android:textColor="@color/video_time_color"
+        android:textSize="@dimen/text_18" />
+
+    <TextView
+        android:id="@+id/tv_currenttime_vitamio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sb_progress_vitamio"
+        android:layout_marginLeft="@dimen/dimen_5"
+        android:layout_marginTop="-17dp"
+        android:text="00:00"
+        android:textColor="@color/video_time_color"
+        android:textSize="@dimen/text_18" />
+
+
+</RelativeLayout>
