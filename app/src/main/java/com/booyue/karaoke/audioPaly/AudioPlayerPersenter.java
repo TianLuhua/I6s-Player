@@ -2,45 +2,25 @@ package com.booyue.karaoke.audioPaly;
 
 import android.content.Context;
 import android.net.Uri;
-import android.os.Handler;
-import android.os.Message;
 
 import com.booyue.karaoke.audioPaly.bean.AudioBean;
 import com.booyue.karaoke.base.AbstractPresenter;
 
 import java.util.List;
 
-import static com.booyue.karaoke.pictureplayer.PicturePlayController.PLAYMODLE_LOOP;
-import static com.booyue.karaoke.pictureplayer.PicturePlayController.PLAYMODLE_SINGLE;
+
 
 /**
  * Created by Tianluhua on 2018\7\30 0030.
  */
 public class AudioPlayerPersenter extends AbstractPresenter<AudioPlayerView> {
 
-    public static final int LOOP_PLAY = 0x0006;
-    private int CURRENT_PLAYMODLE = PLAYMODLE_SINGLE;
-    private int loopTime = 3000;
     private AudioPlayerModel model;
     private boolean isLoopPlay = false;
+
     private int position;
+    private List<AudioBean> imageInfoList;
 
-    private Handler mHandler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            switch (msg.what) {
-                case LOOP_PLAY:
-                    if (getView() == null)
-                        return;
-                    if (position > model.getDataSizi() - 1)
-                        position = 0;
-                    getView().setCureentPage(position, CURRENT_PLAYMODLE);
-                    loopPlay();
-                    break;
-
-            }
-        }
-    };
 
     public AudioPlayerPersenter(Context mContext) {
         model = new AudioPlayerModel(mContext, new AudioPlayerModel.CallBack() {
@@ -52,7 +32,8 @@ public class AudioPlayerPersenter extends AbstractPresenter<AudioPlayerView> {
                 view.setData(imageInfoList, position);
             }
         });
-        position = model.getCureentPosition();
+        this.position = model.getCureentPosition();
+        this.imageInfoList = model.getAudioInfos();
     }
 
     public void getData(Uri uri) {
@@ -61,44 +42,6 @@ public class AudioPlayerPersenter extends AbstractPresenter<AudioPlayerView> {
         model.getData(uri);
     }
 
-    public void setLoopTime(int loopTime) {
-        this.loopTime = loopTime;
-    }
-
-    public void changPlayModle() {
-        if (CURRENT_PLAYMODLE == PLAYMODLE_SINGLE) {
-            CURRENT_PLAYMODLE = PLAYMODLE_LOOP;
-            isLoopPlay = true;
-            loopPlay();
-            return;
-        }
-        if (CURRENT_PLAYMODLE == PLAYMODLE_LOOP) {
-            CURRENT_PLAYMODLE = PLAYMODLE_SINGLE;
-            isLoopPlay = false;
-            singlePlay();
-            return;
-        }
-    }
-
-    private void loopPlay() {
-        mHandler.removeMessages(LOOP_PLAY);
-        if (isLoopPlay) {
-            getView().setCureentPage(position, CURRENT_PLAYMODLE);
-            position++;
-            mHandler.sendMessageDelayed(mHandler.obtainMessage(LOOP_PLAY), loopTime);
-        }
-    }
-
-    private void singlePlay() {
-        if (!isLoopPlay) {
-            getView().setCureentPage(position, CURRENT_PLAYMODLE);
-        }
-    }
-
-    public String getImagePaths(int currentItem) {
-        if (model == null) return "";
-        return model.getImagePaths().get(currentItem);
-    }
 
     public void setCureentPage(int position) {
         if (model == null) return;
@@ -110,6 +53,26 @@ public class AudioPlayerPersenter extends AbstractPresenter<AudioPlayerView> {
         super.detachView();
         if (model != null)
             model.onDestroy();
-        ;
+    }
+
+    public void startPlay() {
+
+    }
+
+    /**
+     * 上一曲
+     */
+    public void onPrev() {
+
+    }
+
+    /**
+     * 下一曲
+     */
+    public void onNext() {
+        position--;
+        if (position < 0) {
+            position = imageInfoList.size() - 1;
+        }
     }
 }

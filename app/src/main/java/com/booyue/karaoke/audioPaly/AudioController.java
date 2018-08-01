@@ -43,18 +43,14 @@ import android.widget.TextView;
 import com.booyue.karaoke.R;
 import com.booyue.karaoke.utils.DisplayUtils;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.List;
 
 import io.vov.vitamio.utils.Log;
 import io.vov.vitamio.utils.StringUtils;
 import io.vov.vitamio.widget.OutlineTextView;
 
 public class AudioController extends FrameLayout implements View.OnClickListener {
+
     private static final int sDefaultTimeout = 3000;
     private static final int FADE_OUT = 1;
     private static final int SHOW_PROGRESS = 2;
@@ -284,14 +280,6 @@ public class AudioController extends FrameLayout implements View.OnClickListener
         show(sDefaultTimeout);
     }
 
-    /**
-     * Set the content of the file_name TextView
-     *
-     * @param name
-     */
-    public void setFileName(String name) {
-    }
-
 
     /**
      * Set the View to hold some information when interact with the
@@ -385,8 +373,6 @@ public class AudioController extends FrameLayout implements View.OnClickListener
                 long pos = 1000L * position / duration;
                 mProgress.setProgress((int) pos);
             }
-//            int percent = mPlayer.getBufferPercentage();
-//            mProgress.setSecondaryProgress(percent * 10);
         }
 
         mDuration = duration;
@@ -491,19 +477,17 @@ public class AudioController extends FrameLayout implements View.OnClickListener
     /**
      * 定义activity需要监听ui的接口
      */
-    private MediaPlayerUIListener mMediaPlayerUIListener;
+    private AudioPlayerUIListener mMediaPlayerUIListener;
 
-    public interface MediaPlayerUIListener {
-        void onBack();
+    public interface AudioPlayerUIListener {
 
         void onPrev();
 
         void onNext();
 
-        void onSwitchTrack();
     }
 
-    public void setMediaPlayerUIListener(MediaPlayerUIListener listener) {
+    public void setMediaPlayerUIListener(AudioPlayerUIListener listener) {
         mMediaPlayerUIListener = listener;
     }
 
@@ -530,60 +514,6 @@ public class AudioController extends FrameLayout implements View.OnClickListener
                 break;
         }
     }
-
-    /**
-     * 声轨切换（伴奏，原唱）
-     */
-    private static final String TAG = "MediaController-----";
-    private List<MediaPlayer.TrackInfo> audioTrackInfos = new ArrayList<>();
-
-    //判断是否支持音轨切换
-    public boolean isSupportAudioTrackTransaction() {
-        if (mPlayer != null) {
-            audioTrackInfos.clear();
-            MediaPlayer.TrackInfo[] trackInfos = mPlayer.getTrackInfo();
-            if (trackInfos != null && trackInfos.length > 0) {
-                for (int i = 0; i < trackInfos.length; i++) {
-                    if (trackInfos[i].getTrackType() == MediaPlayer.TrackInfo.MEDIA_TRACK_TYPE_AUDIO) {
-                        audioTrackInfos.add(trackInfos[i]);
-                    }
-                }
-                if (audioTrackInfos.size() >= 2) {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-
-    private static final String micPath = "/sys/class/switch/micdet/state";
-
-    ///检测mic是否已经插入
-    private String checkMic() {
-        android.util.Log.d(TAG, "checkMic: ");
-        try {
-            File micFile = new File(micPath);
-            if (micFile == null || !micFile.exists()) return null;
-//            FileInputStream fileInputStream = new FileInputStream(micFile);
-            BufferedReader bfr = new BufferedReader(new FileReader(micFile));
-            String line = bfr.readLine();
-            StringBuilder sb = new StringBuilder();
-            while (line != null) {
-                sb.append(line);
-                sb.append("\n");
-                line = bfr.readLine();
-            }
-            bfr.close();
-            Log.d("buffer", "bufferRead: " + sb.toString());
-            return sb.toString();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    //音轨切换
-    private long preClickTime = 0;
 
 
     /**

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/rootView"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.booyue.karaoke.pictureplayer.PicturePlayerActivity">
+    tools:context="com.booyue.karaoke.audioPaly.AudioPalyActivity">
 
 
     <RelativeLayout
@@ -18,8 +18,7 @@
             android:layout_width="268dp"
             android:layout_height="464dp"
             android:layout_marginLeft="@dimen/dimen_84"
-            android:layout_marginTop="@dimen/dimen_80"
-            android:background="@color/colorPrimary" />
+            android:layout_marginTop="@dimen/dimen_80" />
 
         <ImageView
             android:id="@+id/layout_play"

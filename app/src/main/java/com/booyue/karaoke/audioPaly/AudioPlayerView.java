@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface AudioPlayerView extends BaseView {
 
-    void setData(List<AudioBean> imageInfoList, int position);
+    void setData(List<AudioBean> audioInfoList, int position);
 
     void setCureentPage(int page, int palyModle);
 }
