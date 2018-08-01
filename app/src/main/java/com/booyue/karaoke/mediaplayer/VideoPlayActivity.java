@@ -1,19 +1,14 @@
-package com.booyue.karaoke.activity;
+package com.booyue.karaoke.mediaplayer;
 
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
-import android.util.Log;
 import android.view.KeyEvent;
 
 import com.booyue.karaoke.R;
-import com.booyue.karaoke.mediaplayer.MediaController;
-import com.booyue.karaoke.mediaplayer.VitamioVideoView;
+import com.booyue.karaoke.activity.BaseActivity;
 import com.booyue.karaoke.utils.LoggerUtils;
-import com.booyue.karaoke.utils.VideoUtils;
 
 import java.io.File;
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -19,17 +19,13 @@ package com.booyue.karaoke.audioPaly;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
-import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.graphics.Rect;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
-import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -39,12 +35,12 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
+import com.booyue.karaoke.R;
 import com.booyue.karaoke.utils.DisplayUtils;
 
 import java.io.BufferedReader;
@@ -54,7 +50,6 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.vov.vitamio.R;
 import io.vov.vitamio.utils.Log;
 import io.vov.vitamio.utils.StringUtils;
 import io.vov.vitamio.widget.OutlineTextView;
@@ -85,10 +80,8 @@ public class AudioController extends FrameLayout implements View.OnClickListener
     private ImageView ibPlayMode;
     private ImageView ibPrev;
     private ImageView ibNext;
-
-    private FrameLayout ivAccompany;
     private ImageView ivMediaVolume;
-    private FrameLayout flVideo;
+
 
     private SeekBar mProgress;
     private TextView tvDuration, tvCurrentime;
@@ -159,12 +152,6 @@ public class AudioController extends FrameLayout implements View.OnClickListener
             mHandler.sendEmptyMessageDelayed(SHOW_PROGRESS, 1000);
         }
     };
-    private SeekBar volume_progress;
-    private TextView tvProgress;
-    private LinearLayout accompanyLayout;
-    private MyBroadcaseReceiver myBroadcaseReceiver;
-    private ImageView ivOriginal;
-
 
     public AudioController(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -246,56 +233,42 @@ public class AudioController extends FrameLayout implements View.OnClickListener
     }
 
     protected View makeControllerView() {
-        return ((LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(getResources().getIdentifier("contorller_audio", "layout", mContext.getPackageName()), this);
+        LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        return inflater.inflate(R.layout.contorller_audio, this);
     }
 
     private void initControllerView(View v) {
-
-        tvCurrentime = getViewById(v, R.id.tv_currenttime_vitamio);
-        tvDuration = getViewById(v, R.id.tv_durationtime_vitamio);
-
-        ibPlayMode = getViewById(v, R.id.ib_playmode_vitamio);
-        ibPrev = getViewById(v, R.id.ib_prev_vitamio);
-        ibPlay = getViewById(v, R.id.ib_play_vitamio);
-        ibNext = getViewById(v, R.id.ib_next_vitamio);
-        ivMediaVolume = getViewById(v, R.id.img_media_volume);
-
-        accompanyLayout = getViewById(v, R.id.fl_accompany);
-        ivAccompany = getViewById(v, R.id.img_accompany);
-        ivOriginal = getViewById(v, R.id.img_original);
-        flVideo = getViewById(v, R.id.fl_video_vitamio);
-        initListener();
+        mProgress = v.findViewById(R.id.sb_progress);
+        if (mProgress != null) {
+            mProgress.setOnSeekBarChangeListener(mSeekListener);
+            mProgress.setMax(1000);
+        }
+        tvCurrentime = v.findViewById(R.id.tv_currenttime);
+        tvDuration = v.findViewById(R.id.tv_durationtime);
+        ibPlayMode = v.findViewById(R.id.ib_playmode);
+        ibPrev = v.findViewById(R.id.ib_prev);
+        ibPlay = v.findViewById(R.id.ib_play);
         if (ibPlay != null) {
             ibPlay.requestFocus();
             ibPlay.setOnClickListener(mPauseListener);
         }
 
-        mProgress = v.findViewById(R.id.sb_progress_vitamio);
-        if (mProgress != null) {
-            mProgress.setOnSeekBarChangeListener(mSeekListener);
-            mProgress.setMax(1000);
-        }
+        ibNext = v.findViewById(R.id.ib_next);
+        ivMediaVolume = v.findViewById(R.id.ib_volume);
+        initListener();
+
     }
 
     private void initListener() {
         ibPlayMode.setOnClickListener(this);
         ibPrev.setOnClickListener(this);
         ibNext.setOnClickListener(this);
+        ivMediaVolume.setOnClickListener(this);
     }
 
     public void setMediaPlayer(MediaPlayer player) {
         mPlayer = player;
         updatePausePlay();
-    }
-
-    /**
-     * @param v   viewGroup
-     * @param id  group 通过id找到对应的view
-     * @param <T> view的类型
-     * @return
-     */
-    private <T> T getViewById(View v, int id) {
-        return (T) v.findViewById(id);
     }
 
     /**
@@ -345,24 +318,17 @@ public class AudioController extends FrameLayout implements View.OnClickListener
         if (!mShowing && mAnchor != null && mAnchor.getWindowToken() != null) {
             if (ibPlay != null)
                 ibPlay.requestFocus();
-            /**modify by : 2017/11/8 18:12*/
-            if (accompanyLayout != null && accompanyLayout.getVisibility() == GONE) {
-                accompanyLayout.setVisibility(VISIBLE);
-            }
-//      disableUnsupportedButtons();
-
             if (mFromXml) {
                 setVisibility(View.VISIBLE);
             } else {
                 int[] location = new int[2];
 
                 mAnchor.getLocationOnScreen(location);
-                Log.d("show--->x:"+location[0]+",Y:"+location[1]);
                 Rect anchorRect = new Rect(location[0], location[1], location[0] + mAnchor.getWidth(), location[1] + mAnchor.getHeight());
 
                 mWindow.setAnimationStyle(mAnimStyle);
-//                setWindowLayoutType();
-                mWindow.showAtLocation(mAnchor, Gravity.NO_GRAVITY, anchorRect.left+ DisplayUtils.px2dp(mContext,8), anchorRect.top);
+                setWindowLayoutType();
+                mWindow.showAtLocation(mAnchor, Gravity.NO_GRAVITY, anchorRect.left + DisplayUtils.px2dp(mContext, 8), anchorRect.top);
             }
             mShowing = true;
             if (mShownListener != null)
@@ -384,10 +350,6 @@ public class AudioController extends FrameLayout implements View.OnClickListener
     public void hide() {
         if (mAnchor == null)
             return;
-//        if (volumeView.getVisibility() == VISIBLE) {
-//            volumeView.setVisibility(GONE);
-//        }
-
         if (mShowing) {
             try {
                 mHandler.removeMessages(SHOW_PROGRESS);
@@ -542,89 +504,30 @@ public class AudioController extends FrameLayout implements View.OnClickListener
     }
 
     public void setMediaPlayerUIListener(MediaPlayerUIListener listener) {
-
         mMediaPlayerUIListener = listener;
     }
 
-    /**
-     * 接收从videoPlayActivity传过来的数据
-     */
-    public final String MICROPHONE_ACTION = "com.efercro.action.MICROPHONE_ACTION";
-
-    class MyBroadcaseReceiver extends BroadcastReceiver {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            String action = intent.getAction();
-            if (TextUtils.equals(MICROPHONE_ACTION, action)) {
-                if (intent.getIntExtra("state", 0) == 1) {//拔出
-
-                } else if (intent.getIntExtra("state", 0) == 0) {// 插入
-                }
-            }
-
-        }
-    }
-
-    //注册广播
-    public void registerReceiver(Context context) {
-        myBroadcaseReceiver = new MyBroadcaseReceiver();
-        IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction(MICROPHONE_ACTION);
-        if (context != null) {
-            context.registerReceiver(myBroadcaseReceiver, intentFilter);
-        }
-    }
-
-    //注销广播
-    public void unregisterReceiver(Context context) {
-        if (myBroadcaseReceiver != null && context != null) {
-            context.unregisterReceiver(myBroadcaseReceiver);
-        }
-    }
-
-
-    /**
-     * {@link #initListener()}
-     *
-     * @param v
-     */
     @Override
     public void onClick(View v) {
-        int i = v.getId();
-        if (i == R.id.ib_back_vitamio) {
-            if (mMediaPlayerUIListener != null) {
-                mMediaPlayerUIListener.onBack();
-            }
+        switch (v.getId()) {
 
-        } else if (i == R.id.ib_playmode_vitamio) {
-            initPlayModeIcon(true);
+            case R.id.ib_playmode:
+                initPlayModeIcon(true);
+                break;
 
-        } else if (i == R.id.ib_prev_vitamio) {
-            if (mMediaPlayerUIListener != null) {
-                mMediaPlayerUIListener.onPrev();
-            }
-
-        } else if (i == R.id.ib_next_vitamio) {
-            if (mMediaPlayerUIListener != null) {
-                mMediaPlayerUIListener.onNext();
-            }
-
-        } else if (i == R.id.img_accompany) {
-            com.booyue.karaoke.utils.LoggerUtils.d(TAG + "imag_accompany");
-            switchTrack();
-
-        } else if (i == R.id.img_original) {
-            com.booyue.karaoke.utils.LoggerUtils.d(TAG + "imag_ori");
-            switchTrack();
-
-        } else if (i == R.id.img_media_volume) {//背景音量调节
-            setVolume();
-        } else if (i == R.id.fl_video_vitamio) {//点击屏幕弹出window或者销毁window
-            if (isShowing()) {
-                hide();
-            } else {
-                show(sDefaultTimeout);
-            }
+            case R.id.ib_prev:
+                if (mMediaPlayerUIListener != null) {
+                    mMediaPlayerUIListener.onPrev();
+                }
+                break;
+            case R.id.ib_next:
+                if (mMediaPlayerUIListener != null) {
+                    mMediaPlayerUIListener.onNext();
+                }
+                break;
+            case R.id.ib_volume:
+                setVolume();
+                break;
         }
     }
 
@@ -682,24 +585,6 @@ public class AudioController extends FrameLayout implements View.OnClickListener
     //音轨切换
     private long preClickTime = 0;
 
-    public void switchTrack() {
-        //控制点击的频繁度
-        if (System.currentTimeMillis() - preClickTime < 2000) {
-            preClickTime = System.currentTimeMillis();
-            com.booyue.karaoke.utils.LoggerUtils.d(TAG + "click_delta = " + (System.currentTimeMillis() - preClickTime));
-            return;
-        }
-
-        if (isAccompany) {
-            mPlayer.selectTrack(1);
-            initAccompanyView(false);
-            isAccompany = false;
-        } else {
-            mPlayer.selectTrack(2);
-            initAccompanyView(true);
-            isAccompany = true;
-        }
-    }
 
     /**
      * 资源释放
@@ -731,10 +616,9 @@ public class AudioController extends FrameLayout implements View.OnClickListener
     /**
      * 视频播放模式
      */
-    public static final int STATE_PLAY_MODE_SINGLE = 1;
-    public static final int STATE_PLAY_MODE_LIST = 2;
+    public static final int STATE_PLAY_MODE_SINGLE = 0x0001;
+    public static final int STATE_PLAY_MODE_LIST = 0x0002;
     public static int STATE_PLAY_MODE = STATE_PLAY_MODE_LIST;
-
 
     public void setVolume() {
 
@@ -744,67 +628,4 @@ public class AudioController extends FrameLayout implements View.OnClickListener
                         | AudioManager.FLAG_SHOW_UI);
     }
 
-
-    /**
-     * 是否是卡拉kalaoke
-     */
-
-    private boolean isAccompany = false;
-
-    public void setSupportKalaoke() {
-        if (isSupportAudioTrackTransaction()) {
-            //无法调节干脆去掉
-//            String stateStr =  checkMic().trim();
-//            char c = stateStr.charAt(0);
-//            int state = c;
-//            android.util.Log.d(TAG, "setSupportKalaoke: state = " + state);
-//            if(state == 48){
-//                ivMicrophone.setVisibility(GONE);
-//            }else {
-//                ivMicrophone.setVisibility(VISIBLE);
-//            }
-            //原唱
-            if (!isAccompany) {
-                com.booyue.karaoke.utils.LoggerUtils.d(TAG + "isAccompnay =  false");
-                initAccompanyView(false);
-                //伴唱
-            } else {
-                mPlayer.selectTrack(2);
-                com.booyue.karaoke.utils.LoggerUtils.d(TAG + "isAccompnay =  true");
-                isAccompany = true;
-                initAccompanyView(true);
-            }
-        } else {
-            //不支持音轨切换，隐藏功能键
-            if (ivAccompany.getVisibility() != GONE) {
-                ivAccompany.setVisibility(GONE);
-            }
-            if (ivOriginal != null && ivOriginal.getVisibility() != GONE) {
-                ivOriginal.setVisibility(GONE);
-            }
-        }
-    }
-
-    /**
-     * 初始化原唱伴唱视图
-     *
-     * @param isAccompany true 伴唱 false 原唱
-     */
-    private void initAccompanyView(boolean isAccompany) {
-        if (!isAccompany) {
-            if (ivOriginal != null && ivOriginal.getVisibility() == GONE) {
-                ivOriginal.setVisibility(VISIBLE);
-            }
-            if (ivAccompany != null && ivAccompany.getVisibility() == VISIBLE) {
-                ivAccompany.setVisibility(GONE);
-            }
-        } else {
-            if (ivOriginal != null && ivOriginal.getVisibility() == VISIBLE) {
-                ivOriginal.setVisibility(GONE);
-            }
-            if (ivAccompany != null && ivAccompany.getVisibility() == GONE) {
-                ivAccompany.setVisibility(VISIBLE);
-            }
-        }
-    }
 }

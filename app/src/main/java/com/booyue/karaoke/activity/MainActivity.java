@@ -13,6 +13,7 @@ import com.booyue.karaoke.R;
 import com.booyue.karaoke.adapter.MyGridViewAdapter;
 import com.booyue.karaoke.bean.Constants;
 import com.booyue.karaoke.bean.VideoInfo;
+import com.booyue.karaoke.mediaplayer.VideoPlayActivity;
 import com.booyue.karaoke.utils.Logger;
 import com.booyue.karaoke.utils.LoggerUtils;
 

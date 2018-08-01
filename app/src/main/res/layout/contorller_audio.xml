@@ -11,7 +11,7 @@
         android:layout_alignParentBottom="true">
 
         <ImageView
-            android:id="@+id/ib_playmode_vitamio"
+            android:id="@+id/ib_playmode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -19,16 +19,16 @@
             android:src="@drawable/selector_loop" />
 
         <ImageView
-            android:id="@+id/ib_prev_vitamio"
+            android:id="@+id/ib_prev"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/dimen_40"
-            android:layout_toLeftOf="@+id/ib_play_vitamio"
-            android:src="@drawable/selector_pre" />
+            android:layout_toLeftOf="@+id/ib_play"
+            android:src="@drawable/mediacontorller_pre" />
 
         <ImageView
-            android:id="@+id/ib_play_vitamio"
+            android:id="@+id/ib_play"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -36,13 +36,13 @@
             android:src="@drawable/selector_pause" />
 
         <ImageView
-            android:id="@+id/ib_next_vitamio"
+            android:id="@+id/ib_next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/ib_play_vitamio"
+            android:layout_toRightOf="@+id/ib_play"
             android:paddingLeft="@dimen/dimen_40"
-            android:src="@drawable/selector_next" />
+            android:src="@drawable/mediacontorller_next" />
 
         <ImageView
             android:id="@+id/ib_volume"
@@ -56,7 +56,7 @@
 
 
     <SeekBar
-        android:id="@+id/sb_progress_vitamio"
+        android:id="@+id/sb_progress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/ll_menu"
@@ -72,11 +72,11 @@
         android:thumbOffset="@dimen/dimen_10" />
 
     <TextView
-        android:id="@+id/tv_durationtime_vitamio"
+        android:id="@+id/tv_durationtime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/sb_progress_vitamio"
+        android:layout_below="@+id/sb_progress"
         android:layout_marginRight="@dimen/dimen_5"
         android:layout_marginTop="-17dp"
         android:text="00:00"
@@ -84,10 +84,10 @@
         android:textSize="@dimen/text_18" />
 
     <TextView
-        android:id="@+id/tv_currenttime_vitamio"
+        android:id="@+id/tv_currenttime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/sb_progress_vitamio"
+        android:layout_below="@+id/sb_progress"
         android:layout_marginLeft="@dimen/dimen_5"
         android:layout_marginTop="-17dp"
         android:text="00:00"

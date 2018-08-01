@@ -39,7 +39,7 @@
         </activity>
 
         <activity
-            android:name=".activity.VideoPlayActivity"
+            android:name=".mediaplayer.VideoPlayActivity"
             android:configChanges="orientation|screenSize|screenLayout|touchscreen|keyboardHidden|keyboard|layoutDirection"
             android:launchMode="singleTask"
             android:screenOrientation="landscape">
