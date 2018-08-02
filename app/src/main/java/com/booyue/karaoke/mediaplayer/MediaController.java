@@ -499,380 +499,380 @@ public class MediaController extends FrameLayout implements View.OnClickListener
 
         switch (mTitle) {
             //-----------------------多纳英语----------------------------start
-            case "zaoshanghao":
+            case "a0zaoshanghao":
                 mTitle = "01.早上好";
                 break;
-            case "woshi":
+            case "a1woshi":
                 mTitle = "02.我是";
                 break;
-            case "meiweishuiguo":
+            case "a2meiweishuiguo":
                 mTitle = "03.美味的水果";
                 break;
-            case "rangwomenshuyishu":
+            case "a3rangwomenshuyishu":
                 mTitle = "04.我们数数";
                 break;
-            case "shitoujiandaobu":
+            case "a4shitoujiandaobu":
                 mTitle = "05.石头剪刀布";
                 break;
-            case "zhuomicang":
+            case "a5zhuomicang":
                 mTitle = "06.捉迷藏";
                 break;
-            case "chuanshangyifu":
+            case "a6chuanshangyifu":
                 mTitle = "07.穿上衣服";
                 break;
-            case "shangrikuaile":
+            case "a7shangrikuaile":
                 mTitle = "08.生日快乐";
                 break;
-            case "wotule":
+            case "a8wotule":
                 mTitle = "09.我涂了";
                 break;
-            case "moxojiamshenmeyanse":
+            case "a9moxojiamshenmeyanse":
                 mTitle = "10.你喜欢什么颜色";
                 break;
-            case "qudongwuyuan":
+            case "b0qudongwuyuan":
                 mTitle = "11.去动物园";
                 break;
-            case "keaidedongwu":
+            case "b1keaidedongwu":
                 mTitle = "12.可爱的动物";
                 break;
             //-----------------------多纳英语----------------------------end---------强大的分割线
 
             //---------火火兔乐园---- 卡拉ok ---经典儿歌-----------------start
-            case "fenshuajiang03":
+            case "a0fenshuajiang03":
                 mTitle = "01.粉刷匠";
                 break;
-            case "yifenqian09":
+            case "a1yifenqian09":
                 mTitle = "02.一分钱";
                 break;
-            case "woniuyuhuangliniao07":
+            case "a2woniuyuhuangliniao07":
                 mTitle = "03.蜗牛与黄鹂鸟";
                 break;
-            case "lingerxiangdingdang04":
+            case "a3lingerxiangdingdang04":
                 mTitle = "04.铃儿响叮当";
                 break;
-            case "maliyouzhixiaoyanggao19":
+            case "a4maliyouzhixiaoyanggao19":
                 mTitle = "05.玛丽有只小羊羔";
                 break;
-            case "liangzhilaohu10":
+            case "a5liangzhilaohu10":
                 mTitle = "06.两只老虎";
                 break;
-            case "shishangzhiyoumamahao05":
+            case "a6shishangzhiyoumamahao05":
                 mTitle = "07.世上只有妈妈好";
                 break;
-            case "shuyazi06":
+            case "a7shuyazi06":
                 mTitle = "数鸭子";
                 break;
-            case "aiwojiubaobaowo18":
+            case "a8aiwojiubaobaowo18":
                 mTitle = "09.爱我你就抱抱我";
                 break;
-            case "baluobo15":
+            case "a9baluobo15":
                 mTitle = "10.拔萝卜";
                 break;
-            case "chuntianzainali01":
+            case "b0chuntianzainali01":
                 mTitle = "11.春天在哪里";
                 break;
-            case "lanjinling02":
+            case "b1lanjinling02":
                 mTitle = "12.蓝精灵";
                 break;
-            case "shijianzaishuohua17":
+            case "b2shijianzaishuohua17":
                 mTitle = "13.时钟在说话";
                 break;
-            case "woyouyigejia13":
+            case "b3woyouyigejia13":
                 mTitle = "14.我有一个家";
                 break;
-            case "xiaolongren12":
+            case "b4xiaolongren12":
                 mTitle = "15.小龙人";
                 break;
-            case "xiaoxingxing08":
+            case "b5xiaoxingxing08":
                 mTitle = "16.小星星";
                 break;
-            case "xiaoyanzi11":
+            case "b6xiaoyanzi11":
                 mTitle = "17.小燕子";
                 break;
-            case "zhaopengyou14":
+            case "b7zhaopengyou14":
                 mTitle = "18.找朋友";
                 break;
-            case "zhongtaiyang20":
+            case "b8zhongtaiyang20":
                 mTitle = "19.种太阳";
                 break;
-            case "zhuoniqiu16":
+            case "b9zhuoniqiu16":
                 mTitle = "20.捉泥鳅";
                 break;
             //---------火火兔乐园---- 卡拉ok ---经典儿歌-----------------end----------强大的分割线
             //---------火火兔乐园---- 卡拉ok ---原创儿歌-----------------start
-            case "daxiongmao01":
+            case "a0daxiongmao01":
                 mTitle = "01.大熊猫";
                 break;
-            case "chunyu02":
+            case "a1chunyu02":
                 mTitle = "02.春雨";
                 break;
-            case "chaojiyingxiong03":
+            case "a2chaojiyingxiong03":
                 mTitle = "03.超级英雄";
                 break;
-            case "zhuqingting04":
+            case "a3zhuqingting04":
                 mTitle = "04.竹蜻蜓";
                 break;
-            case "shangyuanzhuzhici05":
+            case "a4shangyuanzhuzhici05":
                 mTitle = "05.上元竹枝词";
                 break;
 //经典儿歌 中的第八条重复
-//            case "shuyazi06":
-//                mTitle = "06.数鸭子";
-//                break;
-            case "yinghuoweiguang07":
+            case "a5shuyazi06":
+                mTitle = "06.数鸭子";
+                break;
+            case "a6yinghuoweiguang07":
                 mTitle = "07.萤火微光";
                 break;
-            case "bahe08":
+            case "a7bahe08":
                 mTitle = "08.拔河";
                 break;
-            case "hello09":
+            case "a8hello09":
                 mTitle = "09.hello";
                 break;
-            case "gongfuxiaozi10":
+            case "a9gongfuxiaozi10":
                 mTitle = "10.功夫小子";
                 break;
-            case "xunyinzhibuyu11":
+            case "b0xunyinzhibuyu11":
                 mTitle = "11.寻隐者不遇";
                 break;
-            case "xiaoxiaobinggan12":
+            case "b1xiaoxiaobinggan12":
                 mTitle = "12.小小饼干";
                 break;
-            case "xiaohuajia13":
+            case "b2xiaohuajia13":
                 mTitle = "13.小画家";
                 break;
-            case "shancunyonghuai14":
+            case "b3shancunyonghuai14":
                 mTitle = "14.山村咏怀";
                 break;
-            case "gongxifacai15":
+            case "b4gongxifacai15":
                 mTitle = "15.恭喜发财";
                 break;
-            case "mingnong16":
+            case "b5mingnong16":
                 mTitle = "16.悯农";
                 break;
-            case "jinglige17":
+            case "b6jinglige17":
                 mTitle = "17.敬礼歌";
                 break;
-            case "chuntianzainali18":
+            case "b7chuntianzainali18":
                 mTitle = "18.春天在哪里";
                 break;
-            case "zhishuge19":
+            case "b8zhishuge19":
                 mTitle = "19.植树歌";
                 break;
-            case "aixiliangshi20":
+            case "b9aixiliangshi20":
                 mTitle = "20.爱惜粮食";
                 break;
-            case "hua21":
+            case "c0hua21":
                 mTitle = "21.画";
                 break;
-            case "qiuyinong22":
+            case "c1qiuyinong22":
                 mTitle = "22.秋意浓";
                 break;
-            case "meilitianye23":
+            case "c2meilitianye23":
                 mTitle = "23.美丽的田野";
                 break;
-            case "laoshukaihui24":
+            case "c3laoshukaihui24":
                 mTitle = "24.老鼠开会";
                 break;
-            case "wuyixiang25":
+            case "c4wuyixiang25":
                 mTitle = "25.乌衣巷";
                 break;
-            case "daguonian26":
+            case "c5daguonian26":
                 mTitle = "26.过大年";
                 break;
             //---------火火兔乐园---- 卡拉ok ---原创儿歌-----------------end----------强大的分割线
 
             //---------火火兔乐园---- 卡拉ok ---火火兔唱古诗-----------------start
-            case "ye01":
+            case "a0ye01":
                 mTitle = "08.咏鹅";
                 break;
-            case "jys02":
+            case "a1jys02":
                 mTitle = "02.静夜思";
                 break;
-            case "yr03":
+            case "a2yr03":
                 mTitle = "03.元日";
                 break;
-            case "lzc04":
+            case "a3lzc04":
                 mTitle = "04.凉州词";
                 break;
-            case "cs05":
+            case "a4cs05":
                 mTitle = "05.出塞";
                 break;
-            case "bdd06":
+            case "a5bdd06":
                 mTitle = "06.别董大";
                 break;
-            case "glyx07":
+            case "a6glyx07":
                 mTitle = "07.古朗月行";
                 break;
-            case "fdgyclb08":
+            case "a7fdgyclb08":
                 mTitle = "01.赋得古原草送别";
                 break;
-            case "xyzby09":
+            case "a8xyzby09":
                 mTitle = "09.寻隐者不遇";
                 break;
-            case "xc10":
+            case "a9xc10":
                 mTitle = "10.小池";
                 break;
-            case "sx11":
+            case "b0sx11":
                 mTitle = "11.山行";
                 break;
-            case "jhzs12":
+            case "b1jhzs12":
                 mTitle = "12.己亥杂诗";
                 break;
-            case "zfbdc13":
+            case "b2zfbdc13":
                 mTitle = "13.早发白帝城";
                 break;
-            case "zccsb14":
+            case "b3zccsb14":
                 mTitle = "14.早春呈水部张十八员外";
                 break;
-            case "cyxy15":
+            case "b4cyxy15":
                 mTitle = "15.春夜喜雨";
                 break;
-            case "cx16":
+            case "b5cx16":
                 mTitle = "16.春晓";
                 break;
-            case "wlspb17":
+            case "b6wlspb17":
                 mTitle = "17.望庐山瀑布";
                 break;
-            case "fqyb18":
+            case "b7fqyb18":
                 mTitle = "18.枫桥夜泊";
                 break;
-            case "jpdbxh19":
+            case "b8jpdbxh19":
                 mTitle = "19.江畔独步寻花";
                 break;
-            case "jx20":
+            case "b9jx20":
                 mTitle = "20.江雪";
                 break;
-            case "yzy21":
+            case "c0yzy21":
                 mTitle = "21.游子吟";
                 break;
-            case "dgql22":
+            case "c1dgql22":
                 mTitle = "22.登鹳雀楼";
                 break;
-            case "jj23":
+            case "c2jj23":
                 mTitle = "23.绝句";
                 break;
-            case "cgx24":
+            case "c3cgx24":
                 mTitle = "24.长歌行";
                 break;
 
             //---------火火兔乐园---- 卡拉ok ---火火兔唱古诗-----------------end----------强大的分割线
             //---------火火兔乐园---- 艺术培养 -------艺术之旅----------start---------
-            case "":
+            case "a0sjmh1":
                 mTitle = "世界名画1";
                 break;
-            case "0":
+            case "a1sjmh2":
                 mTitle = "世界名画2";
                 break;
-            case "1":
+            case "a2sjmh3":
                 mTitle = "世界名画3";
                 break;
-            case "2":
+            case "a3sjmh4":
                 mTitle = "世界名画4";
                 break;
-            case "3":
+            case "a4sjmh5":
                 mTitle = "世界名画5";
                 break;
-            case "4":
+            case "a5zmds":
                 mTitle = "著名雕塑欣赏";
                 break;
             //---------火火兔乐园---- 艺术培养 --------艺术之旅---------end---------强大的分割线
 
             //---------火火兔乐园---- 艺术培养 -------小小画家----------start---------
-            case "5":
+            case "a0xiaopangxie01":
                 mTitle = "01.小螃蟹";
                 break;
-            case "6":
+            case "a1xiaomifeng02":
                 mTitle = "02.小蜜蜂";
                 break;
-            case "7":
+            case "a2xiaomuji03":
                 mTitle = "03.小母鸡";
                 break;
-            case "8":
+            case "a3xiaoniunai04":
                 mTitle = "04.小奶牛";
                 break;
-            case "9":
+            case "a4xiaoyu05":
                 mTitle = "05.小鱼";
                 break;
-            case "10":
+            case "a5xiaohouzi06":
                 mTitle = "06.小猴子";
                 break;
-            case "11":
+            case "a6xiaozhu07":
                 mTitle = "07.小猪";
                 break;
-            case "12":
+            case "a7xiaohuamao08":
                 mTitle = "08.小花猫";
                 break;
-            case "13":
+            case "a8changjinglu09":
                 mTitle = "09.小长颈鹿";
                 break;
-            case "14":
+            case "a9jijiubao10":
                 mTitle = "10.急救包";
                 break;
-            case "15":
+            case "b0qingwa11":
                 mTitle = "11.青蛙";
                 break;
-            case "16":
+            case "b1luantuluanhua12":
                 mTitle = "12.乱涂乱画";
                 break;
-            case "17":
+            case "b2caihong13":
                 mTitle = "13.彩虹";
                 break;
-            case "18":
+            case "b3aihusongling14":
                 mTitle = "14.爱护树林";
                 break;
-            case "19":
+            case "b4shuomohua15":
                 mTitle = "15.水墨画";
                 break;
-            case "20":
+            case "b5woxiangyaozhangda16":
                 mTitle = "16.我想要长大";
                 break;
-            case "21":
+            case "b6yuzhou17":
                 mTitle = "17.宇宙";
                 break;
-            case "22":
+            case "b7dagongji18":
                 mTitle = "18.大公鸡";
                 break;
             //---------火火兔乐园---- 艺术培养 -------小小画家----------edn--------强大的分割线
 
             //---------火火兔乐园---- 艺术培养 -------律动儿歌----------start---------
 
-            case "23":
+            case "a0lingerxiangdingdang01":
                 mTitle = "01.铃儿响叮当";
                 break;
-            case "24":
+            case "a1bingtanghulu02":
                 mTitle = "02.冰糖葫芦";
                 break;
-            case "25":
+            case "a2paizhaopian03":
                 mTitle = "03.拍照片";
                 break;
-            case "26":
+            case "a3yinghuoweiguang04":
                 mTitle = "04.萤火微光";
                 break;
-            case "27":
+            case "a4gongxifacai05":
                 mTitle = "05.恭喜发财鸡";
                 break;
-            case "28":
+            case "a5gudonglaile06":
                 mTitle = "06.叮咚来了";
                 break;
-            case "29":
+            case "a6zhiqingting07":
                 mTitle = "07.竹蜻蜓";
                 break;
-            case "30":
+            case "a7chaojiyingxiong08":
                 mTitle = "08.超级英雄";
                 break;
-            case "31":
+            case "a8xuanzhuanmuma09":
                 mTitle = "09.旋转木马";
                 break;
-            case "32":
+            case "a9yundongge10":
                 mTitle = "10.运动歌";
                 break;
-            case "33":
+            case "b0shuyazi11":
                 mTitle = "11.数鸭子";
                 break;
-            case "34":
+            case "b1naozhongxiangdingdang12":
                 mTitle = "12.闹铃叮当响";
                 break;
-            case "35":
+            case "b2huanlehht13":
                 mTitle = "13.欢乐火火兔";
                 break;
             //---------火火兔乐园---- 艺术培养 -------律动儿歌----------edn--------强大的分割线
@@ -891,14 +891,6 @@ public class MediaController extends FrameLayout implements View.OnClickListener
     public void setInfoView(OutlineTextView v) {
         mInfoView = v;
     }
-
-//  private void disableUnsupportedButtons() {
-//    try {
-//      if (ibPlay != null && !mPlayer.canPause())
-//        ibPlay.setEnabled(false);
-//    } catch (IncompatibleClassChangeError ex) {
-//    }
-//  }
 
     /**
      * <p>
