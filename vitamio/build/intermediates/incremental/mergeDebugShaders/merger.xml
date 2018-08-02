@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="E:\WorkSpace\AS_WorkSpace\I6s-Player\vitamio\src\main\shaders"/></dataSet><dataSet config="debug"><source path="E:\WorkSpace\AS_WorkSpace\I6s-Player\vitamio\src\debug\shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="E:\workspace\as\karaoke\vitamio\src\main\shaders"/></dataSet><dataSet config="debug"><source path="E:\workspace\as\karaoke\vitamio\src\debug\shaders"/></dataSet></merger>

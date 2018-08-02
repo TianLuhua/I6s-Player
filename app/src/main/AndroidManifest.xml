@@ -53,13 +53,6 @@
         </activity>
 
         <activity
-            android:name=".mediaplayer.VideoPlayerActivity"
-            android:configChanges="orientation|screenSize|screenLayout|touchscreen|keyboardHidden|keyboard|layoutDirection"
-            android:exported="true"
-            android:launchMode="singleTask"
-            android:screenOrientation="landscape" />
-
-        <activity
             android:name=".pictureplayer.PicturePlayerActivity"
             android:configChanges="orientation|screenSize|screenLayout|touchscreen|keyboardHidden|keyboard|layoutDirection"
             android:launchMode="singleTask"
