@@ -447,7 +447,7 @@
     </string>
     <string name="VideoView_error_text_unknown">抱歉，此视频无法播放!</string>
     <string name="VideoView_error_title">视频错误</string>
-    <string name="app_name">卡拉OK</string>
+    <string name="app_name">火火兔媒体播放器</string>
     <string name="complete">完成</string>
     <string name="local_karaoke">经典儿歌</string>
     <string name="local_video">我的视频</string>

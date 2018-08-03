@@ -6,6 +6,7 @@ import android.view.KeyEvent;
 
 import com.booyue.karaoke.R;
 import com.booyue.karaoke.activity.BaseActivity;
+import com.booyue.karaoke.utils.FileUtils;
 import com.booyue.karaoke.utils.LoggerUtils;
 
 import java.io.File;
@@ -69,20 +70,20 @@ public class VideoPlayActivity extends BaseActivity implements MediaController.M
 
 
     private void getDataFromActivity() {
-
         Uri uri = getIntent().getData();
-        String path = uri.getPath();
+        //根据uri获取媒体文件绝对路径
+        String path = FileUtils.getFilePathByUri(getApplicationContext(), uri);
         int startIndex = path.lastIndexOf("/");
         File rootFile = new File(path.substring(0, startIndex));
         String rootPath = rootFile.getPath();
-        for (String s : rootFile.list()) {
+        String[] files = rootFile.list();
+        for (String s : files) {
             String childPath = rootPath + "/" + s;
             //系统支持：mp4、mkv格式
             if (childPath.endsWith("mp4") || childPath.endsWith("mkv")) {
                 videoInfoList.add(childPath);
 //                Log.e("tlh", "getDataFromActivity:" + childPath);
             }
-
         }
         position = videoInfoList.indexOf(path);
 //        Log.e("tlh", "getDataFromActivity--position:" + position);
