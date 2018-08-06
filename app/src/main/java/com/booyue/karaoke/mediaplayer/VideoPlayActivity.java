@@ -119,6 +119,9 @@ public class VideoPlayActivity extends BaseActivity implements MediaController.M
         }
     }
 
+    //系统内置媒体文件根路径
+    public static final String HHT_MEDIA_ROOTPATH = "/system/videos/";
+
     /**
      * 初始化每个视频的UI
      */
@@ -134,12 +137,17 @@ public class VideoPlayActivity extends BaseActivity implements MediaController.M
 ////            int lastIndexOfDot = videoName.lastIndexOf(".");
 ////            videoView.setName(videoName.substring(0, lastIndexOfDot));
 ////        }
+        if (videoPath.startsWith(HHT_MEDIA_ROOTPATH)) {
+            videoView.mediaPathIsHHTMedia(true);
+        }else {
+            videoView.mediaPathIsHHTMedia(false);
+        }
         videoView.setName(videoName);
         videoView.setVideoPath(videoPath);
         videoView.requestFocus();
         videoView.start();
 //        LoggerUtils.d(TAG + "视频名称：" + videoName);
-        LoggerUtils.d(TAG + "视频路径：" + videoPath);
+//        LoggerUtils.d(TAG + "视频路径：" + videoPath);
         /**modify by : 2017/11/8 17:31 针对于普通视频和kalaoke视频不同来隐藏伴奏视图*/
     }
 

@@ -168,7 +168,7 @@ public class VitamioVideoView extends SurfaceView implements io.vov.vitamio.widg
     private MediaPlayer mMediaPlayer = null;
     private int mVideoWidth;
     private int mVideoHeight;
-//    private float mVideoAspectRatio;
+    //    private float mVideoAspectRatio;
     private boolean mHardwareDecoder = false;
     private int mSurfaceWidth;
     private int mSurfaceHeight;
@@ -271,6 +271,7 @@ public class VitamioVideoView extends SurfaceView implements io.vov.vitamio.widg
                 mOnSeekCompleteListener.onSeekComplete(mp);
         }
     };
+
     public VitamioVideoView(Context context) {
         super(context);
         initVideoView(context);
@@ -455,6 +456,18 @@ public class VitamioVideoView extends SurfaceView implements io.vov.vitamio.widg
      */
     public OnVideoErrorListener mOnVideoErrorListener;
 
+
+    private boolean isHHTMedia = false;
+
+    /**
+     * 当前播放的媒体文件是否是系统内置 （做特俗处理）
+     *
+     * @param b
+     */
+    public void mediaPathIsHHTMedia(boolean b) {
+        this.isHHTMedia = b;
+    }
+
     public interface OnVideoErrorListener {
 
         void onVideoError();
@@ -482,7 +495,7 @@ public class VitamioVideoView extends SurfaceView implements io.vov.vitamio.widg
                 List<String> paths = mUri.getPathSegments();
                 String name = paths == null || paths.isEmpty() ? "null" : paths.get(paths.size() - 1);
                 String titleName = mName != null ? mName : name;
-                mMediaController.setFileName(titleName);
+                mMediaController.setFileName(titleName, isHHTMedia);
             }
         }
     }
@@ -666,6 +679,7 @@ public class VitamioVideoView extends SurfaceView implements io.vov.vitamio.widg
     public void setBufferSize(int bufSize) {
         mBufSize = bufSize;
     }
+
     protected boolean isInPlaybackState() {
         return (mMediaPlayer != null && mCurrentState != STATE_ERROR && mCurrentState != STATE_IDLE && mCurrentState != STATE_PREPARING);
     }
