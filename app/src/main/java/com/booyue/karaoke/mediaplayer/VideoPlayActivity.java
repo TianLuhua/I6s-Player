@@ -79,8 +79,8 @@ public class VideoPlayActivity extends BaseActivity implements MediaController.M
         String[] files = rootFile.list();
         for (String s : files) {
             String childPath = rootPath + "/" + s;
-            //系统支持：mp4、mkv格式
-            if (childPath.endsWith("mp4") || childPath.endsWith("mkv")|| childPath.endsWith("avi")) {
+            //系统支持：mp4、mkv、3gp、avi
+            if (childPath.endsWith("mp4") || childPath.endsWith("mkv")|| childPath.endsWith("avi")|| childPath.endsWith("3gp")) {
                 videoInfoList.add(childPath);
 //                Log.e("tlh", "getDataFromActivity:" + childPath);
             }

@@ -47,8 +47,12 @@ public class PicturePlayerModel implements BaseModel {
         for (String s : rootFile.list()) {
             String childPath = rootPath + "/" + s;
             imagePaths.add(s);
-            //系统支持：jpg、png
-            if (childPath.endsWith(".jpg") || childPath.endsWith(".png") || childPath.endsWith(".bmp")) {
+//            //系统支持：jpg、png
+//              <data android:mimeType="image/bmp" />
+//                <data android:mimeType="image/jpeg" />
+//                <data android:mimeType="image/gif" />
+//                <data android:mimeType="image/png" />
+            if (childPath.endsWith(".jpeg") || childPath.endsWith(".png") || childPath.endsWith(".bmp") || childPath.endsWith(".gif")) {
                 View itemView = LayoutInflater.from(mContext).inflate(R.layout.item_pictureactivity_viewpager, null);
                 final PhotoView photoView = itemView.findViewById(R.id.item_image);
                 Glide.with(mContext).load(childPath).diskCacheStrategy(DiskCacheStrategy.ALL)

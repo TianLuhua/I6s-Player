@@ -48,7 +48,11 @@
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="video/*" />
+
+                <data android:mimeType="video/mp4" />
+                <data android:mimeType="video/mkv" />
+                <data android:mimeType="video/avi" />
+                <data android:mimeType="video/3gp" />
             </intent-filter>
         </activity>
 
@@ -61,7 +65,10 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
 
-                <data android:mimeType="image/*" />
+                <data android:mimeType="image/bmp" />
+                <data android:mimeType="image/jpeg" />
+                <data android:mimeType="image/gif" />
+                <data android:mimeType="image/png" />
             </intent-filter>
         </activity>
 
@@ -73,7 +80,8 @@
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="audio/*" />
+                <data android:mimeType="audio/mp3" />
+                <data android:mimeType="audio/wav" />
             </intent-filter>
         </activity>
     </application>
