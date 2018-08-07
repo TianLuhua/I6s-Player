@@ -320,6 +320,7 @@ public class MediaController extends FrameLayout implements View.OnClickListener
         accompanyLayout = getViewById(v, R.id.fl_accompany);
         ivAccompany = getViewById(v, R.id.img_accompany);
         ivOriginal = getViewById(v, R.id.img_original);
+        ivOriginal.setVisibility(GONE);
         ivMicrophone = getViewById(v, R.id.img_microphone);
         ivMicrophone.setVisibility(GONE);
         flVideo = getViewById(v, R.id.fl_video_vitamio);
