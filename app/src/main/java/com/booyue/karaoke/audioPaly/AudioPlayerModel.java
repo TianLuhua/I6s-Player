@@ -44,7 +44,7 @@ public class AudioPlayerModel implements BaseModel {
                 for (String s : rootFile.list()) {
                     String childPath = rootPath + "/" + s;
                     //系统支持：mp3
-                    if (childPath.endsWith(".mp3") || childPath.endsWith(".wav")) {
+                    if (childPath.endsWith(".mp3") || childPath.endsWith(".wav")|| childPath.endsWith(".ogg")) {
                         audioPaths.add(s);
                         AudioBean audio = new AudioBean();
                         audio.setName(s);

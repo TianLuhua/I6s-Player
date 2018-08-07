@@ -82,6 +82,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:mimeType="audio/mp3" />
                 <data android:mimeType="audio/wav" />
+                <data android:mimeType="audio/ogg" />
             </intent-filter>
         </activity>
     </application>
