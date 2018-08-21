@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/I6s-Player.iml" filepath="$PROJECT_DIR$/I6s-Player.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/karaoke.iml" filepath="$PROJECT_DIR$/karaoke.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../AS_WorkSpace/I6s-Player/karaoke.iml" filepath="$PROJECT_DIR$/../../AS_WorkSpace/I6s-Player/karaoke.iml" />
       <module fileurl="file://$PROJECT_DIR$/vitamio/vitamio.iml" filepath="$PROJECT_DIR$/vitamio/vitamio.iml" />
     </modules>
   </component>

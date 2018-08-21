@@ -53,6 +53,7 @@
                 <data android:mimeType="video/mkv" />
                 <data android:mimeType="video/avi" />
                 <data android:mimeType="video/3gp" />
+                <data android:mimeType="video/ts" />
             </intent-filter>
         </activity>
 
@@ -80,6 +81,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="audio/mp3" />
                 <data android:mimeType="audio/wav" />
                 <data android:mimeType="audio/ogg" />

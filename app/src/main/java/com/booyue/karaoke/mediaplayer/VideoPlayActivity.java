@@ -3,6 +3,7 @@ package com.booyue.karaoke.mediaplayer;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.view.KeyEvent;
+import android.widget.Toast;
 
 import com.booyue.karaoke.R;
 import com.booyue.karaoke.activity.BaseActivity;
@@ -80,7 +81,7 @@ public class VideoPlayActivity extends BaseActivity implements MediaController.M
         for (String s : files) {
             String childPath = rootPath + "/" + s;
             //系统支持：mp4、mkv、3gp、avi
-            if (childPath.endsWith("mp4") || childPath.endsWith("mkv")|| childPath.endsWith("avi")|| childPath.endsWith("3gp")) {
+            if (childPath.endsWith("mp4") || childPath.endsWith("mkv") || childPath.endsWith("avi") || childPath.endsWith("3gp") || childPath.endsWith("ts")) {
                 videoInfoList.add(childPath);
 //                Log.e("tlh", "getDataFromActivity:" + childPath);
             }
@@ -129,6 +130,14 @@ public class VideoPlayActivity extends BaseActivity implements MediaController.M
         /**校验路径*/
         //去掉后缀名
 //        String videoName = videoInfoList.get(position).videoName;
+
+        //
+        if (videoInfoList == null || videoInfoList.size() < 0 || position < 0) {
+            Toast.makeText(getBaseContext(), getResources().getText(R.string.not_suport_file), Toast.LENGTH_LONG).show();
+            finish();
+            return;
+        }
+
         String videoPath = videoInfoList.get(position);
         int startIndex = videoPath.lastIndexOf("/");
         int endIndex = videoPath.lastIndexOf(".");
@@ -139,7 +148,7 @@ public class VideoPlayActivity extends BaseActivity implements MediaController.M
 ////        }
         if (videoPath.startsWith(HHT_MEDIA_ROOTPATH)) {
             videoView.mediaPathIsHHTMedia(true);
-        }else {
+        } else {
             videoView.mediaPathIsHHTMedia(false);
         }
         videoView.setName(videoName);
