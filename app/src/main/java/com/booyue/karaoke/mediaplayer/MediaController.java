@@ -514,8 +514,498 @@ public class MediaController extends FrameLayout implements View.OnClickListener
 //        public static final String HHT_LY_KALAOK_HHTCGS_25 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "cgx24.mp4";
 //        public static final String HHT_LY_KALAOK_HHTCGS_26 = HHT_LY_KALAOK_HHTCGS_ROOT_PATH + "cgx24.mp4";
 
+// 火火兔学堂---早教英语----邦尼英语
+//        public static final String HHT_XT_ZJYY_BANGNI_01 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "a0Hello_how_are_you" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_02 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "a1Where_is_Bunny" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_03 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "a2Boy_and_girl" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_04 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "a3Stand_up_sit_down" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_05 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "a4Wash_your_hands" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_06 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "a5Nice_food" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_07 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "a6I_see" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_08 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "a7Whats_this" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_09 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "a8A_candy_for_you" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_10 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "a9One_potato" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_11 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "b0Happy" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_12 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "b1Shake" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_13 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "b2Which_one_do_you_like" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_14 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "b3Who_can_do_it" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_15 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "b4I_want" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_16 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "b5Traffic_lights" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_17 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "b6How_do_you_feel" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_18 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "b7Mid_Autumn_Day" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_19 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "b8Taste" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_20 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "b9What_are_you_wearing" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_21 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "c0I_see_you" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_22 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "c1Music_man" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_23 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "c2Rain" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_24 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "c3Merry_Christmas" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_25 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "c4What_shape_is_it" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_26 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "c5Numbers" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_27 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "c6Fly_a_kite" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_28 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "c7Is_it_yours" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_29 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "c8Three_bears" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_30 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "c9At_home" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_31 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "d0Its_too_hot" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_32 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "d1Who_is_coming" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_33 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "d2A_busy_day" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_34 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "d3Little_rabbits" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_35 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "d4Can_i_help_you" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_36 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "d5Three_little_pigs" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_37 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "d6I_am_a_bus" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_38 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "d7Bingo" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_39 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "d8Five_little_monkeys" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_40 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "d9Chinese_new_year" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_41 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "e0Fun_to_play" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_42 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "e1Rabbit_and_tortoise" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_43 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "e2What_is_your_favorite_sport" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_44 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "e3Bears_teeth" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_45 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "e4Happy_mothers_day" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_46 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "e5A_big_radish_in_the_hole" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_47 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "e6The_muffin_man" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BANGNI_48 = HHT_XT_ZJYY_BANGNI_ROOT_PATH + "e7Goodbye" + MediaFromart.MP4;
+
+// 火火兔学堂---早教英语----宝狄英语
+//        public static final String HHT_XT_ZJYY_BAODI_01 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "a0Bodhis_ABC" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_02 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "a1A_Day_at_Cafe_Sambolo_1" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_03 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "a2All_These_Shapes1" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_04 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "a3America_Song" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_05 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "a4Around_My_Rooms" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_06 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "a5Asia_Song" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_07 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "a6Better_Weather" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_08 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "a7Body_Bop" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_09 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "a8Check_out_my_toy" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_10 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "a9City_Life_City_Lights" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_11 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "b0Clean_and_Green" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_12 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "b1Colourful_Party" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_13 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "b2Count_on_You" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_14 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "b3Count_with_Bodhi" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_15 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "b4Day_and_Night" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_16 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "b5Dream_Team" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_17 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "b6Dress_You_Up" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_18 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "b7Everyday_Heroes" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_19 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "b8Face_It" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_20 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "b9Family" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_21 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "c0Food" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_22 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "c1Friends_Forever" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_23 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "c2Full_Circle" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_24 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "c3Fun_Family_Day" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_25 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "c4Future_of_the_World" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_26 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "c5Good_Food_Good_for_You" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_27 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "c6I_Can_Do_It" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_28 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "c7I_Love_Food" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_29 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "c8Imagine" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_30 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "c9In_Our_Neighbourhood" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_31 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "d0Its_a_New_Day" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_32 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "d1Lets_Get_Fit" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_33 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "d2Lets_Go_to_School" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_34 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "d3Lets_Have_a_Good_Time" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_35 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "d4Lets_Take_It_from_123" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_36 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "d5Lets_play_ball" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_37 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "d6Make_This_the_Best_Day" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_38 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "d7Meet_Our_Families" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_39 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "d8Mix_and_Match" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_40 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "d9Move_Our_Bodies" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_41 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "e0My_Heart" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_42 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "e1My_Home" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_43 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "e2No_Place_Like_Home" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_44 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "e3Pat_Your_Pet" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_45 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "e4Pet_Sounds" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_46 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "e5Push_Through_Dont_Stop" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_47 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "e6Rainbow_Shining" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_48 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "e7Reap_What_You_Sow" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_49 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "e8School_Days" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_50 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "e9See_you_later" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_51 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "f0Sharing_is_Caring" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_52 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "f1Sing_Along_with_Bodhi_and_Friends" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_53 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "f2So_Much_to_Do" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_54 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "f3Thats_What_We_Like" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_55 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "f4The_Face_Song" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_56 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "f5The_Greetings_Song" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_57 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "f6The_Hello_Song" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_58 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "f7The_Name_of_the_Game" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_59 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "f8The_Sounds_of_the_Farm" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_60 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "f9The_time_is_now" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_61 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "g0Things_That_Go" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_62 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "g1Together" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_63 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "g2Toys_toys_everywhere" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_64 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "g3We_Are_on_the_Go" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_65 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "g4We_Can_Be_Anything" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_66 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "g5We_ll_Be_Your_Shelter" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_67 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "g6Weather_Ready" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_68 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "g7Welcome_to_Our_World" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_69 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "g8Welcome_to_the_Farm" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_70 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "g9When_I_Grow_Up" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_71 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "h0With_My_Eyes" + MediaFromart.MP4;
+//        public static final String HHT_XT_ZJYY_BAODI_72 = HHT_XT_ZJYY_BAODI_ROOT_PATH + "h1Work_Hard_Get_Smart" + MediaFromart.MP4;
+
 
         switch (mTitle) {
+            //-----------------------邦尼英语----------------------------start
+            case "Hello_how_are_you":
+                mTitle = "01.Hello_how_are_you";
+                break;
+            case "Where_is_Bunny":
+                mTitle = "02.Where_is_Bunny";
+                break;
+            case "Boy_and_girl":
+                mTitle = "03.Boy_and_girl";
+                break;
+            case "Stand_up_sit_down":
+                mTitle = "04.Stand_up_sit_down";
+                break;
+            case "Wash_your_hands":
+                mTitle = "05.Wash_your_hands";
+                break;
+            case "Nice_food":
+                mTitle = "06.Nice_food";
+                break;
+            case "I_see":
+                mTitle = "07.I_see";
+                break;
+            case "Whats_this":
+                mTitle = "08.Whats_this";
+                break;
+            case "A_candy_for_you":
+                mTitle = "09.A_candy_for_you";
+                break;
+            case "One_potato":
+                mTitle = "10.One_potato";
+                break;
+            case "Happy":
+                mTitle = "11.Happy";
+                break;
+            case "Shake":
+                mTitle = "12.Shake";
+                break;
+            case "Which_one_do_you_like":
+                mTitle = "13.Which_one_do_you_like";
+                break;
+            case "Who_can_do_it":
+                mTitle = "14.Who_can_do_it";
+                break;
+            case "I_want":
+                mTitle = "15.I_want";
+                break;
+            case "Traffic_lights":
+                mTitle = "16.Traffic_lights";
+                break;
+            case "How_do_you_feel":
+                mTitle = "17.How_do_you_feel";
+                break;
+            case "Mid_Autumn_Day":
+                mTitle = "18.Mid_Autumn_Day";
+                break;
+            case "Taste":
+                mTitle = "19.Taste";
+                break;
+            case "What_are_you_wearing":
+                mTitle = "20.What_are_you_wearing";
+                break;
+            case "I_see_you":
+                mTitle = "21.I_see_you";
+                break;
+            case "Music_man":
+                mTitle = "22.Music_man";
+                break;
+            case "Rain":
+                mTitle = "23.Rain";
+                break;
+            case "Merry_Christmas":
+                mTitle = "24.Merry_Christmas";
+                break;
+            case "What_shape_is_it":
+                mTitle = "25.What_shape_is_it";
+                break;
+            case "Numbers":
+                mTitle = "26.Numbers";
+                break;
+            case "Fly_a_kite":
+                mTitle = "27.Fly_a_kite";
+                break;
+            case "Is_it_yours":
+                mTitle = "28.Is_it_yours";
+                break;
+            case "Three_bears":
+                mTitle = "29.Three_bears";
+                break;
+            case "At_home":
+                mTitle = "30.At_home";
+                break;
+            case "Its_too_hot":
+                mTitle = "31.Its_too_hot";
+                break;
+            case "Who_is_coming":
+                mTitle = "32.Who_is_coming";
+                break;
+            case "A_busy_day":
+                mTitle = "33.A_busy_day";
+                break;
+            case "Little_rabbits":
+                mTitle = "34.Little_rabbits";
+                break;
+            case "Can_i_help_you":
+                mTitle = "35.Can_i_help_you";
+                break;
+            case "Three_little_pigs":
+                mTitle = "36.Three_little_pigs";
+                break;
+            case "I_am_a_bus":
+                mTitle = "37.I_am_a_bus";
+                break;
+            case "Bingo":
+                mTitle = "38.Bingo";
+                break;
+            case "Five_little_monkeys":
+                mTitle = "39.Five_little_monkeys";
+                break;
+            case "Chinese_new_year":
+                mTitle = "40.Chinese_new_year";
+                break;
+            case "Fun_to_play":
+                mTitle = "41.Fun_to_play";
+                break;
+            case "Rabbit_and_tortoise":
+                mTitle = "42.Rabbit_and_tortoise";
+                break;
+            case "What_is_your_favorite_sport":
+                mTitle = "43.What_is_your_favorite_sport";
+                break;
+            case "Bears_teeth":
+                mTitle = "44.Bears_teeth";
+                break;
+            case "Happy_mothers_day":
+                mTitle = "45.Happy_mothers_day";
+                break;
+            case "A_big_radish_in_the_hole":
+                mTitle = "46.A_big_radish_in_the_hole";
+                break;
+            case "The_muffin_man":
+                mTitle = "47.The_muffin_man";
+                break;
+            case "Goodbye":
+                mTitle = "48.Goodbye";
+                break;
+            //-----------------------邦尼英语----------------------------end
+
+            //-----------------------宝狄英语----------------------------start
+            case "Bodhis_ABC":
+                mTitle = "01.Bodhis_ABC";
+                break;
+            case "A_Day_at_Cafe_Sambolo_1":
+                mTitle = "02.A_Day_at_Cafe_Sambolo_1";
+                break;
+            case "All_These_Shapes1":
+                mTitle = "03.All_These_Shapes1";
+                break;
+            case "America_Song":
+                mTitle = "04.America_Song";
+                break;
+            case "Around_My_Rooms":
+                mTitle = "05.Around_My_Rooms";
+                break;
+            case "Asia_Song":
+                mTitle = "06.Asia_Song";
+                break;
+            case "Better_Weather":
+                mTitle = "07.Better_Weather";
+                break;
+            case "Body_Bop":
+                mTitle = "08.Body_Bop";
+                break;
+            case "Check_out_my_toy":
+                mTitle = "09.Check_out_my_toy";
+                break;
+            case "City_Life_City_Lights":
+                mTitle = "10.City_Life_City_Lights";
+                break;
+            case "Clean_and_Green":
+                mTitle = "11.Clean_and_Green";
+                break;
+            case "Colourful_Party":
+                mTitle = "12.Colourful_Party";
+                break;
+            case "Count_on_You":
+                mTitle = "13.Count_on_You";
+                break;
+            case "Count_with_Bodhi":
+                mTitle = "14.Count_with_Bodhi";
+                break;
+            case "Day_and_Night":
+                mTitle = "15.Day_and_Night";
+                break;
+            case "Dream_Team":
+                mTitle = "16.Dream_Team";
+                break;
+            case "Dress_You_Up":
+                mTitle = "17.Dress_You_Up";
+                break;
+            case "Everyday_Heroes":
+                mTitle = "18.Everyday_Heroes";
+                break;
+            case "Face_It":
+                mTitle = "19.Face_It";
+                break;
+            case "Family":
+                mTitle = "20.Family";
+                break;
+            case "Food":
+                mTitle = "21.Food";
+                break;
+            case "Friends_Forever":
+                mTitle = "22.Friends_Forever";
+                break;
+            case "Full_Circle":
+                mTitle = "23.Full_Circle";
+                break;
+            case "Fun_Family_Day":
+                mTitle = "24.Fun_Family_Day";
+                break;
+            case "Future_of_the_World":
+                mTitle = "25.Future_of_the_World";
+                break;
+            case "Good_Food_Good_for_You":
+                mTitle = "26.Good_Food_Good_for_You";
+                break;
+            case "I_Can_Do_It":
+                mTitle = "27.I_Can_Do_It";
+                break;
+            case "I_Love_Food":
+                mTitle = "28.I_Love_Food";
+                break;
+            case "Imagine":
+                mTitle = "29.Imagine";
+                break;
+            case "In_Our_Neighbourhood":
+                mTitle = "30.In_Our_Neighbourhood";
+                break;
+            case "Its_a_New_Day":
+                mTitle = "31.Its_a_New_Day";
+                break;
+            case "Lets_Get_Fit":
+                mTitle = "32.Lets_Get_Fit";
+                break;
+            case "Lets_Go_to_School":
+                mTitle = "33.Lets_Go_to_School";
+                break;
+            case "Lets_Have_a_Good_Time":
+                mTitle = "34.Lets_Have_a_Good_Time";
+                break;
+            case "Lets_Take_It_from_123":
+                mTitle = "35.Lets_Take_It_from_123";
+                break;
+            case "Lets_play_ball":
+                mTitle = "36.Lets_play_ball";
+                break;
+            case "Make_This_the_Best_Day":
+                mTitle = "37.Make_This_the_Best_Day";
+                break;
+            case "Meet_Our_Families":
+                mTitle = "38.Meet_Our_Families";
+                break;
+            case "Mix_and_Match":
+                mTitle = "39.Mix_and_Match";
+                break;
+            case "Move_Our_Bodies":
+                mTitle = "40.Move_Our_Bodies";
+                break;
+            case "My_Heart":
+                mTitle = "41.My_Heart";
+                break;
+            case "My_Home":
+                mTitle = "42.My_Home";
+                break;
+            case "No_Place_Like_Home":
+                mTitle = "43.No_Place_Like_Home";
+                break;
+            case "Pat_Your_Pet":
+                mTitle = "44.Pat_Your_Pet";
+                break;
+            case "Pet_Sounds":
+                mTitle = "45.Pet_Sounds";
+                break;
+            case "Push_Through_Dont_Stop":
+                mTitle = "46.Push_Through_Dont_Stop";
+                break;
+            case "Rainbow_Shining":
+                mTitle = "47.Rainbow_Shining";
+                break;
+            case "Reap_What_You_Sow":
+                mTitle = "48.Reap_What_You_Sow";
+                break;
+            case "School_Days":
+                mTitle = "49.School_Days";
+                break;
+            case "See_you_later":
+                mTitle = "50.See_you_later";
+                break;
+            case "Sharing_is_Caring":
+                mTitle = "51.Sharing_is_Caring";
+                break;
+            case "Sing_Along_with_Bodhi_and_Friends":
+                mTitle = "52.Sing_Along_with_Bodhi_and_Friends";
+                break;
+            case "So_Much_to_Do":
+                mTitle = "53.So_Much_to_Do";
+                break;
+            case "Thats_What_We_Like":
+                mTitle = "54.Thats_What_We_Like";
+                break;
+            case "The_Face_Song":
+                mTitle = "55.The_Face_Song";
+                break;
+            case "The_Greetings_Song":
+                mTitle = "56.The_Greetings_Song";
+                break;
+            case "The_Hello_Song":
+                mTitle = "57.The_Hello_Song";
+                break;
+            case "The_Name_of_the_Game":
+                mTitle = "58.The_Name_of_the_Game";
+                break;
+            case "The_Sounds_of_the_Farm":
+                mTitle = "59.The_Sounds_of_the_Farm";
+                break;
+            case "The_time_is_now":
+                mTitle = "60.The_time_is_now";
+                break;
+            case "Things_That_Go":
+                mTitle = "61.Things_That_Go";
+                break;
+            case "Together":
+                mTitle = "62.Together";
+                break;
+            case "Toys_toys_everywhere":
+                mTitle = "63.Toys_toys_everywhere";
+                break;
+            case "We_Are_on_the_Go":
+                mTitle = "64.We_Are_on_the_Go";
+                break;
+            case "We_Can_Be_Anything":
+                mTitle = "65.We_Can_Be_Anything";
+                break;
+            case "We_ll_Be_Your_Shelter":
+                mTitle = "66.We_ll_Be_Your_Shelter";
+                break;
+            case "Weather_Ready":
+                mTitle = "67.Weather_Ready";
+                break;
+            case "Welcome_to_Our_World":
+                mTitle = "68.Welcome_to_Our_World";
+                break;
+            case "Welcome_to_the_Farm":
+                mTitle = "69.Welcome_to_the_Farm";
+                break;
+            case "When_I_Grow_Up":
+                mTitle = "70.When_I_Grow_Up";
+                break;
+            case "With_My_Eyes":
+                mTitle = "71.With_My_Eyes";
+                break;
+            case "Work_Hard_Get_Smart":
+                mTitle = "72.Work_Hard_Get_Smart";
+                break;
+            // -----------------------宝狄英语----------------------------end
+
             //-----------------------多纳英语----------------------------start
             case "zaoshanghao":
                 mTitle = "01.早上好";

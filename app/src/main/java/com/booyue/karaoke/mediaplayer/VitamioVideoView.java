@@ -460,7 +460,7 @@ public class VitamioVideoView extends SurfaceView implements io.vov.vitamio.widg
     private boolean isHHTMedia = false;
 
     /**
-     * 当前播放的媒体文件是否是系统内置 （做特俗处理）
+     * 当前播放的媒体文件是否是系统内置 （做特殊处理）
      *
      * @param b
      */
